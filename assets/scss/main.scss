@@ -1,0 +1,20 @@
+// Bootstrap
+@import url('bootstrap.min.css');
+
+// Variables
+@import 'variables';
+
+// Base
+@import 'base';
+
+// Fonts
+@import 'fonts';
+
+// Slick
+@import url('slick/slick-theme.min.css');
+@import url('slick/slick.min.css');
+
+// Components
+
+@import 'components/header';
+@import 'components/footer';

@@ -1,0 +1,95 @@
+// Open Sans
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url('/assets/fonts/openSans/open-sans/OpenSans.eot'); /* IE9 Compat Modes */
+    src: local('open sans'), local('OpenSans'),
+        url('/assets/fonts/openSans/open-sans/OpenSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/assets/fonts/openSans/open-sans/OpenSans.woff2') format('woff2'), /* Super Modern Browsers */
+        url('/assets/fonts/openSans/open-sans/OpenSans.woff') format('woff'), /* Modern Browsers */
+        url('/assets/fonts/openSans/open-sans/OpenSans.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/assets/fonts/openSans/open-sans/OpenSans.svg#OpenSans') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+}
+
+// Open Sans Bold
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url('/assets/fonts/openSans/open-sans-bold/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+    src: local('open sans bold'), local('OpenSans-Bold'),
+        url('/assets/fonts/openSans/open-sans-bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/assets/fonts/openSans/open-sans-bold/OpenSans-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('/assets/fonts/openSans/open-sans-bold/OpenSans-Bold.woff') format('woff'), /* Modern Browsers */
+        url('/assets/fonts/openSans/open-sans-bold/OpenSans-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/assets/fonts/openSans/open-sans-bold/OpenSans-Bold.svg#OpenSans') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Open Sans Semibold
+@font-face {
+    font-family: "Open Sans Semibold";
+    src: url('/assets/fonts/openSans/open-sans-semibold/OpenSans-Semibold.eot'); /* IE9 Compat Modes */
+    src: local('open sans semibold'), local('OpenSans-Semibold'),
+        url('/assets/fonts/openSans/open-sans-semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/assets/fonts/openSans/open-sans-semibold/OpenSans-Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('/assets/fonts/openSans/open-sans-semibold/OpenSans-Semibold.woff') format('woff'), /* Modern Browsers */
+        url('/assets/fonts/openSans/open-sans-semibold/OpenSans-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/assets/fonts/openSans/open-sans-semibold/OpenSans-Semibold.svg#OpenSans') format('svg'); /* Legacy iOS */
+    font-weight: 600;
+    font-style: normal;
+}
+
+// Open Sans Light
+@font-face {
+    font-family: "Open Sans Light";
+    src: url('/assets/fonts/openSans/open-sans-light/OpenSans-Light.eot'); /* IE9 Compat Modes */
+    src: local('open sans light'), local('OpenSans-Light'),
+        url('/assets/fonts/openSans/open-sans-light/OpenSans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/assets/fonts/openSans/open-sans-light/OpenSans-Light.woff2') format('woff2'), /* Super Modern Browsers */
+        url('/assets/fonts/openSans/open-sans-light/OpenSans-Light.woff') format('woff'), /* Modern Browsers */
+        url('/assets/fonts/openSans/open-sans-light/OpenSans-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/assets/fonts/openSans/open-sans-light/OpenSans-Light.svg#OpenSans') format('svg'); /* Legacy iOS */
+    font-weight: 300;
+    font-style: normal;
+}
+
+// Nunito Bold Italic
+@font-face {
+    font-family: 'Nunito Bold Italic';
+    src: url('/assets/fonts/nunito/nunito-bold-italic/Nunito-BoldItalic.eot');
+    src: url('/assets/fonts/nunito/nunito-bold-italic/Nunito-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/nunito/nunito-bold-italic/Nunito-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/nunito/nunito-bold-italic/Nunito-BoldItalic.woff') format('woff'),
+        url('/assets/fonts/nunito/nunito-bold-italic/Nunito-BoldItalic.ttf') format('truetype'),
+        url('/assets/fonts/nunito/nunito-bold-italic/Nunito-BoldItalic.svg#Nunito-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+// Nunito Bold
+@font-face {
+    font-family: 'Nunito Bold';
+    src: url('/assets/fonts/nunito/nunito-bold/Nunito-Bold.eot');
+    src: url('/assets/fonts/nunito/nunito-bold/Nunito-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/nunito/nunito-bold/Nunito-Bold.woff2') format('woff2'),
+        url('/assets/fonts/nunito/nunito-bold/Nunito-Bold.woff') format('woff'),
+        url('/assets/fonts/nunito/nunito-bold/Nunito-Bold.ttf') format('truetype'),
+        url('/assets/fonts/nunito/nunito-bold/Nunito-Bold.svg#Nunito-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Nunito
+@font-face {
+    font-family: 'Nunito Regular';
+    src: url('/assets/fonts/nunito/nunito/Nunito-Regular.eot');
+    src: url('/assets/fonts/nunito/nunito/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/nunito/nunito/Nunito-Regular.woff2') format('woff2'),
+        url('/assets/fonts/nunito/nunito/Nunito-Regular.woff') format('woff'),
+        url('/assets/fonts/nunito/nunito/Nunito-Regular.ttf') format('truetype'),
+        url('/assets/fonts/nunito/nunito/Nunito-Regular.svg#Nunito-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
