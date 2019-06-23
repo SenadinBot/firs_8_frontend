@@ -73,20 +73,22 @@ $(document).ready(function () {
         });
     };
 
-    // Our Clients Carousel
-    $('.our-clients-carousel').slick({
+    // Footer Intro Carousel
+    $('.footer-intro-carousel').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 7000,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    variableWidth: false,
                 }
             },
             {
@@ -94,6 +96,7 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    variableWidth: false,
                 }
             },
             {
@@ -101,6 +104,7 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    variableWidth: false,
                 }
             },
         ]

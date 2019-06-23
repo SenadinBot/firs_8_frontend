@@ -55,10 +55,39 @@ $nunitoBoldItalic: 'Nunito Bold Italic';
   }
 }
 
-.hidden-xlg,
-.hidden-lg,
-.hidden-md,
-.hidden-sm,
 .hidden-xs {
+  @include media-xs() {
     display: none !important;
+  }
+}
+.hidden-sm {
+  @include media-sm() {
+    display: none !important;
+  }
+}
+.hidden-md {
+  @include media-md() {
+    display: none !important;
+  }
+}
+.hidden-lg {
+  @include media-lg() {
+    display: none !important;
+  }
+}
+.hidden-xlg{
+  @include media-xlg() {
+    display: none !important;
+  }
+}
+
+.container {
+  &.custom-container {
+    @include media-xlg() {
+      max-width: 1600px;
+    }
+    @include media-lg() {
+      max-width: 1600px;
+    }
+  }
 }
