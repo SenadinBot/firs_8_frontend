@@ -401,10 +401,12 @@ header {
                             @include media-md {
                                 visibility: visible;
                                 opacity: 1;
+                                z-index: 99;
                             }
                             @include media-lg {
                                 visibility: visible;
                                 opacity: 1;
+                                z-index: 99;
                             }
                         }
                     }
@@ -453,7 +455,7 @@ header {
                     top: 53px;
                     text-align: left;
                     width: 100%;
-                    z-index: 99;
+                    // z-index: 99;
                     -webkit-transition: all 0.4s ease-in-out;
                     -moz-transition: all 0.4s ease-in-out;
                     -o-transition: all 0.4s ease-in-out;

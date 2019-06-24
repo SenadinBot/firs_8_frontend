@@ -110,6 +110,11 @@ $(document).ready(function () {
         ]
     });
 
+    // Video Modal
+    $('.video-modal').on('hidden.bs.modal', function () {
+        $(".video-modal iframe").attr("src", $(".video-modal iframe").attr("src"));
+    });
+
 });
 
 //Set Map

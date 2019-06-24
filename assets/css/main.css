@@ -560,11 +560,13 @@ header {
         @media (min-width: 992px) and (max-width: 1199px) {
           header nav > ul > li.sub-menu:hover .mega-menu {
             visibility: visible;
-            opacity: 1; } }
+            opacity: 1;
+            z-index: 99; } }
         @media (min-width: 1200px) {
           header nav > ul > li.sub-menu:hover .mega-menu {
             visibility: visible;
-            opacity: 1; } }
+            opacity: 1;
+            z-index: 99; } }
         header nav > ul > li.sub-menu.first-level > .mobile-arrow img {
           -webkit-transform: rotate(270deg);
           -moz-transform: rotate(270deg);
@@ -598,7 +600,6 @@ header {
           top: 53px;
           text-align: left;
           width: 100%;
-          z-index: 99;
           -webkit-transition: all 0.4s ease-in-out;
           -moz-transition: all 0.4s ease-in-out;
           -o-transition: all 0.4s ease-in-out;
