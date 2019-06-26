@@ -1,6 +1,6 @@
 .person-container {
     margin-bottom: 40px;
-    background-color: #F5F2F2;
+    background-color: $gray;
     height: 100%;
     @include media-xs {
         margin-bottom: 30px;
