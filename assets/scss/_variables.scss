@@ -91,4 +91,12 @@ $nunitoBoldItalic: 'Nunito Bold Italic';
       max-width: 1600px;
     }
   }
+  &.big-custom-container {
+    @include media-xlg() {
+      max-width: 1680px;
+    }
+    @include media-lg() {
+      max-width: 1680px;
+    }
+  }
 }
