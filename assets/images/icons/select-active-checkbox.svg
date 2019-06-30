@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_265" data-name="Group 265" transform="translate(-448 -143)">
+    <g id="Rectangle_855" data-name="Rectangle 855" transform="translate(448 143)" fill="none" stroke="#d1001a" stroke-width="1">
+      <rect width="24" height="24" stroke="none"/>
+      <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
+    </g>
+    <g id="Group_155" data-name="Group 155" transform="translate(-89 -244)">
+      <rect id="Rectangle_709" data-name="Rectangle 709" width="12" height="12" transform="translate(544 393)" fill="none"/>
+      <path id="Checkbox" d="M4.045,7.034,0,2.99l.821-.821L4.045,5.334,9.379,0,10.2.821Z" transform="translate(544 395)" fill="#d1001a"/>
+    </g>
+  </g>
+</svg>

@@ -17,10 +17,10 @@ $(document).ready(function () {
     });
 
     // Open/Close Header Search
-    $('.header-search-icon').on('click', function() {
+    $('.header-search-icon').on('click', function () {
         $(this).parent().addClass('search-active');
     });
-    $('.inner-close-icon').on('click', function() {
+    $('.inner-close-icon').on('click', function () {
         $('.header-search').removeClass('search-active');
     });
 
@@ -115,6 +115,169 @@ $(document).ready(function () {
         $(".video-modal iframe").attr("src", $(".video-modal iframe").attr("src"));
     });
 
+    // Testimonial Carousel
+    $('.testimonial-carousel').slick({
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            },
+        ]
+    });
+
+    // Products Carousel
+    $('.products-carousel').slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+
+    // Accordion active body
+    $('.card-header').click(function () {
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass('active');
+        } else {
+            $('.card-header').parent().removeClass('active');
+            $(this).parent().addClass('active');
+        }
+    });
+
+    // Video Carousel
+    $('.video-carousel').slick({
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                }
+            },
+        ]
+    });
+
+    // Text Image Carousel
+    $('.text-image-carousel').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 800,
+        lazyLoad: 'progressive',
+        waitForAnimate: true,
+        useTransform: true,
+    }).slickAnimation();
+    $('.slick-prev').click(function () {
+        $('.text-image-carousel').slick('slickPrev');
+    })
+    $('.slick-next').click(function () {
+        $('.text-image-carousel').slick('slickNext');
+    })
+
+    // Custom Select
+    $("select").prettySelect();
+    $('.select-title').on('click', function () {
+        $(this).parents('.select-item').toggleClass('select-open').siblings().removeClass('select-open');
+    });
+
+    // Products Filter
+    $('.filter-icon').on('click', function () {
+        $(this).parent().addClass('active-filter');
+    });
+    $('.filter-list li').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.filter-container').removeClass('active-filter');
+    });
+    var $obj = $('.filter-container');
+    var top = $obj.offset().top - parseFloat($obj.css('marginTop').replace(/auto/, 0));
+    $(window).scroll(function (event) {
+        var position = $(this).scrollTop() + 115;
+        if (position >= top) {
+            $obj.addClass('filter-fixed');
+        } else {
+            $obj.removeClass('filter-fixed');
+        }
+    });
+    $(window).on('load', function () {
+        var position = $(this).scrollTop() + 115;        
+        if (position >= top) {
+            $('.filter-container').addClass('filter-fixed');
+        }
+    });
+
+    
 });
 
 //Set Map
@@ -122,9 +285,14 @@ function initMap() {
     if ($('#map').length > 0) {
         function initialize() {
             var myLatlng = new google.maps.LatLng(53.3333, -3.08333);
-            var imagePath = '../../assets/images/icons/location.svg'
+            var color = "#212640";
             var mapOptions = {
                 zoom: 11,
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                zoomControl: false,
+                disableDefaultUI: true,
                 center: myLatlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
@@ -142,12 +310,24 @@ function initMap() {
             var marker = new google.maps.Marker({
                 position: myLatlng,
                 map: map,
-                icon: imagePath,
+                // icon: imagePath,
                 title: 'image title'
             });
 
             google.maps.event.addListener(marker, 'click', function () {
                 infowindow.open(map, marker);
+            });
+
+            bounds = new google.maps.LatLngBounds(
+                new google.maps.LatLng(-84.999999, -179.999999),
+                new google.maps.LatLng(84.999999, 179.999999));
+
+            rect = new google.maps.Rectangle({
+                bounds: bounds,
+                fillColor: color,
+                fillOpacity: 0.6,
+                strokeWeight: 0,
+                map: map
             });
 
             //Resize Function

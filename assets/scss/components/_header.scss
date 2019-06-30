@@ -864,7 +864,7 @@ header {
                 font-family: $openSansSemiBold;
                 font-size: 12px;
                 line-height: 17px;
-                color: #847C7A;
+                color: $lightBrown;
                 margin-right: 17px;
                 &:last-child {
                     margin-right: 15px;
@@ -872,7 +872,7 @@ header {
                 @include media-xs {
                     font-size: 10px;
                     line-height: 15px;
-                    color: #847C7A;
+                    color: $lightBrown;
                     margin-right: 10px;
                     &:last-child {
                         margin-right: 10px;

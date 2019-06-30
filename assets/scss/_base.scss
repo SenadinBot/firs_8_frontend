@@ -8,6 +8,7 @@ h1 {
     font-family: $nunitoBold;
     font-size: 56px;
     line-height: 70px;
+    color: $dark;
 }
 h2 {
     margin: 0 0 15px 0;
@@ -15,6 +16,7 @@ h2 {
     font-family: $nunitoBold;
     font-size: 46px;
     line-height: 60px;
+    color: $dark;
     @include media-xs {
         font-size: 42px;
         line-height: 56px;    
@@ -26,6 +28,8 @@ h3 {
     font-family: $nunitoBold;
     font-size: 26px;
     line-height: 35px;
+    letter-spacing: 0.03em;
+    color: $dark;
     @include media-xs {
         font-size: 24px;
         line-height: 32px;    
@@ -62,7 +66,7 @@ a {
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 0.02em;
-        color: #D1001A;
+        color: $mainRed;
         &:after {
             content: "";
             display: inline-block;
@@ -95,7 +99,7 @@ a {
             -ms-transition: all 0.3s ease-in-out 0s;
             -o-transition: all 0.3s ease-in-out 0s;
             transition: all 0.3s ease-in-out 0s;
-            background-color: #D1001A;
+            background-color: $mainRed;
         }
         &:hover {
             &:after {
@@ -112,6 +116,15 @@ a {
                 -ms-transform: scaleX(1);
                 -o-transform: scaleX(1);
                 transform: scaleX(1);
+            }
+        }
+        &.white-read-more {
+            color: $white;
+            &:before {
+                background-color: $white;
+            }
+            &:after {
+                background-image: url("../../../assets/images/icons/white-right-icon.png");
             }
         }
     }
@@ -272,5 +285,62 @@ a {
 .container { 
     @include media-xs-landscape {
         max-width: 100%;
+    }
+}
+.remove-padding {
+    padding: 0;
+}
+.slick-dots {
+    position: relative;
+    bottom: 0;
+    margin: 40px 0 30px 0;
+    height: 11px;
+    li {
+        width: 11px;
+        height: 11px;
+        margin: 0 26px 0 0;
+        top: -12px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    background-image: url("../../assets/images/icons/red-dot.svg")
+                }
+            }
+        }
+        button {
+            width: 11px;
+            height: 11px;
+            padding: 0;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            &:before {
+                opacity: 1;
+                content: "";
+                background-image: url("../../assets/images/icons/dark-dot.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 11px;
+                height: 11px;
+            }
+            &:hover {
+                &:before {
+                    background-image: url("../../assets/images/icons/red-dot.svg");
+                }
+            }
+        }
+    }
+}
+.content-padding {
+    padding: 75px 0;
+}
+.margin-top {
+    margin-top: -55px;
+    @include media-xlg {
+        margin-top: -65px;
     }
 }

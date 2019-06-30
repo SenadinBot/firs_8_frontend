@@ -214,7 +214,7 @@
         input {
             border: none;
             font-family: $openSans;
-            color: #847C7A;
+            color: $lightBrown;
             font-size: 16px;
             line-height: 18px;
             letter-spacing: 0.02em;
@@ -222,28 +222,28 @@
             width: 100%;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 font-family: $openSans;
-                color: #847C7A;
+                color: $lightBrown;
                 font-size: 16px;
                 line-height: 18px;
                 letter-spacing: 0.02em;
             }
             &::-moz-placeholder { /* Firefox 19+ */
                 font-family: $openSans;
-                color: #847C7A;
+                color: $lightBrown;
                 font-size: 16px;
                 line-height: 18px;
                 letter-spacing: 0.02em;
             }
             &:-ms-input-placeholder { /* IE 10+ */
                 font-family: $openSans;
-                color: #847C7A;
+                color: $lightBrown;
                 font-size: 16px;
                 line-height: 18px;
                 letter-spacing: 0.02em;
             }
             &:-moz-placeholder { /* Firefox 18- */
                 font-family: $openSans;
-                color: #847C7A;
+                color: $lightBrown;
                 font-size: 16px;
                 line-height: 18px;
                 letter-spacing: 0.02em;

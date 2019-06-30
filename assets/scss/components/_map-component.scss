@@ -1,0 +1,52 @@
+.map-container {
+    font-size: 0;
+    height: 600px;
+    @include media-xlg {
+        height: 760px;
+    }
+    .content-container {
+        background-color: #212640;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        vertical-align: top;
+        padding: 100px 50px 0 70px;
+        @include media-xlg {
+            padding: 192px 50px 0 160px;
+        }
+        h3 {
+            color: $white;
+            font-size: 36px;
+            line-height: 42px;
+            letter-spacing: 0.03em;
+            margin-bottom: 27px;
+        }
+        p {
+            color: $white;
+        }
+        a {
+            margin-top: 30px;
+        }
+    }
+    .map {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        vertical-align: top;
+        position: relative;
+        .gm-style-cc {
+            display: none;
+        }
+        a[href^="http://maps.google.com/maps"],
+        a[href^="https://maps.google.com/maps"],
+        a[href^="https://www.google.com/maps"] {
+            display: none !important;
+        }
+        .gm-bundled-control .gmnoprint {
+            display: block;
+        }
+        .gmnoprint:not(.gm-bundled-control) {
+            display: none;
+        }
+    }
+}

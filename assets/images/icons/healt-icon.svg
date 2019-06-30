@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56.19" height="50.169" viewBox="0 0 56.19 50.169">
+  <g id="Group_119" data-name="Group 119" transform="translate(-161 -1344)">
+    <g id="Group_99" data-name="Group 99" transform="translate(162 1345)">
+      <rect id="Rectangle_205" data-name="Rectangle 205" width="54.19" height="36.127" transform="translate(0 12.042)" fill="none" stroke="#d1001a" stroke-linecap="round" stroke-width="2"/>
+      <rect id="Rectangle_206" data-name="Rectangle 206" width="24.084" height="12.042" transform="translate(15.053 0)" fill="none" stroke="#d1001a" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_100" data-name="Group 100" transform="translate(181.373 1366.871)">
+      <g id="Group_50" data-name="Group 50" transform="translate(0 6.273)">
+        <path id="Path_97" data-name="Path 97" d="M1434.728,470.04h-12.543a1.108,1.108,0,1,1,0-2.216h12.543a1.108,1.108,0,0,1,0,2.216Z" transform="translate(-1421.076 -467.824)" fill="#d1001a"/>
+      </g>
+      <g id="Group_51" data-name="Group 51" transform="translate(6.37)">
+        <path id="Path_98" data-name="Path 98" d="M1424.663,480.14a1.109,1.109,0,0,1-1.106-1.109V466.488a1.11,1.11,0,0,1,2.221,0v12.543A1.111,1.111,0,0,1,1424.663,480.14Z" transform="translate(-1423.557 -465.381)" fill="#d1001a"/>
+      </g>
+    </g>
+  </g>
+</svg>
