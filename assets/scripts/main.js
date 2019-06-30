@@ -261,7 +261,9 @@ $(document).ready(function () {
         $('.filter-container').removeClass('active-filter');
     });
     var $obj = $('.filter-container');
-    var top = $obj.offset().top - parseFloat($obj.css('marginTop').replace(/auto/, 0));
+    if ($obj.length) {
+        var top = $obj.offset().top;
+    }
     $(window).scroll(function (event) {
         var position = $(this).scrollTop() + 115;
         if (position >= top) {
@@ -271,13 +273,30 @@ $(document).ready(function () {
         }
     });
     $(window).on('load', function () {
-        var position = $(this).scrollTop() + 115;        
+        var position = $(this).scrollTop() + 115;
         if (position >= top) {
             $('.filter-container').addClass('filter-fixed');
         }
     });
 
-    
+    // Form Steps
+    // var form = $("#step-form");
+    // form.steps({
+    //     headerTag: "h3",
+    //     bodyTag: "section",
+    //     transitionEffect: "slideLeft",
+    //     onStepChanging: function (event, currentIndex, newIndex) {
+    //         form.validate().settings.ignore = ":disabled,:hidden";
+    //         return form.valid();
+    //     },
+    //     onFinishing: function (event, currentIndex) {
+    //         form.validate().settings.ignore = ":disabled";
+    //         return form.valid();
+    //     },
+    //     onFinished: function (event, currentIndex) {
+    //         alert("Submitted!");
+    //     }
+    // });
 });
 
 //Set Map
