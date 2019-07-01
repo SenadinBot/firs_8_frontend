@@ -279,24 +279,58 @@ $(document).ready(function () {
         }
     });
 
-    // Form Steps
-    // var form = $("#step-form");
-    // form.steps({
-    //     headerTag: "h3",
-    //     bodyTag: "section",
-    //     transitionEffect: "slideLeft",
-    //     onStepChanging: function (event, currentIndex, newIndex) {
-    //         form.validate().settings.ignore = ":disabled,:hidden";
-    //         return form.valid();
-    //     },
-    //     onFinishing: function (event, currentIndex) {
-    //         form.validate().settings.ignore = ":disabled";
-    //         return form.valid();
-    //     },
-    //     onFinished: function (event, currentIndex) {
-    //         alert("Submitted!");
-    //     }
-    // });
+    // Form Steps Wizard
+    var navListItems = $('div.setup-panel div a'),
+        allWells = $('.step-content'),
+        allNextBtn = $('.nextBtn'),
+        allPrevBtn = $('.prevBtn');
+    
+    allWells.hide();
+    navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+            $item = $(this);
+
+        if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('active-step');
+            $item.addClass('active-step');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+        }
+    });
+
+    allPrevBtn.click(function () {
+        var curStep = $(this).closest(".step-content"),
+            curStepBtn = curStep.attr("id"),
+            prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+        $('div.setup-panel div a[href="#' + curStepBtn + '"]').removeClass('active-step');
+        prevStepWizard.removeAttr('disabled').trigger('click');
+    });
+
+    allNextBtn.click(function () {
+        var curStep = $(this).closest(".step-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url'], input[type='email'], input[type='password']"),
+            isValid = true;
+        $(".form-group").removeClass("has-error");
+        for (var i = 0; i < curInputs.length; i++) {
+            if (!curInputs[i].validity.valid) {
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+        if (isValid) {
+            nextStepWizard.removeAttr('disabled').trigger('click');
+        }
+    });
+    $('div.setup-panel div a.active-step').trigger('click');
+
+    // Product Feedback Stars
+    $('.feedback-item').on('click', function() {
+        $(this).toggleClass('active').siblings().removeClass('active');
+    });
 });
 
 //Set Map
