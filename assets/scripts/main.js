@@ -284,7 +284,7 @@ $(document).ready(function () {
         allWells = $('.step-content'),
         allNextBtn = $('.nextBtn'),
         allPrevBtn = $('.prevBtn');
-    
+
     allWells.hide();
     navListItems.click(function (e) {
         e.preventDefault();
@@ -327,6 +327,8 @@ $(document).ready(function () {
     });
     $('div.setup-panel div a.active-step').trigger('click');
 
+    // Tabs to Accordion
+    $(".tab_accord_wrapper").tab2accordion();
 });
 
 //Set Map
