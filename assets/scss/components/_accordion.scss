@@ -1,0 +1,138 @@
+.accordion {
+    h2 {
+        margin-bottom: 39px;
+    }
+    .card {
+        text-align: left;
+        border-radius: 0;
+        border: 1px solid $lightGray;
+        border-bottom: none;
+        -webkit-transition: all .3s ease 0s;
+        -moz-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        transition: all .3s ease 0s;
+        &.active {
+            border: 1px solid $mainRed !important; 
+            &:last-child {
+                border-bottom: 1px solid $mainRed;
+            }
+        }
+        &:last-child {
+            border-bottom: 1px solid $lightGray;
+        }
+    }
+    .card-header {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        -webkit-transition: all .3s ease 0s;
+        -moz-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        transition: all .3s ease 0s;
+        border: none;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        color: $dark;
+        font-family: $nunitoBold;
+        padding: 14px 32px 14px 16px;
+        &:after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url("../../../assets/images/icons/forward-arrow.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 17px;
+            right: 16px;
+            -webkit-transition: all .3s ease 0s;
+            -moz-transition: all .3s ease 0s;
+            -o-transition: all .3s ease 0s;
+            transition: all .3s ease 0s;
+            @include media-xs {
+                top: 17px;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: none;
+            }
+        }
+        &.collapsed {
+            &:after {
+                background-image: url("../../../assets/images/icons/forward-arrow-right.svg");
+                @include media-xs {
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    .card-body {
+        border: none;
+        padding: 0px 20px 15px 20px;
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.03em;
+            color: $dark;
+            font-family: $openSans;
+            margin-bottom: 20px;
+        }
+    }
+    &.feedback-accordion {
+        .card {
+            background-color: transparent;
+        }
+        .card-header {
+            &:after {
+                display: none;
+            }
+        }
+        .star-content { 
+            position: absolute;
+            top: 22px;
+            right: 30px;
+            &:after {
+                content: "";
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: block;
+                margin: 0 auto;
+                width: 12px;
+                height: 11px;
+            }
+            &.one-star {
+                &:after {
+                    background-image: url("../../../assets/images/icons/one-red-star.svg");
+                    width: 12px;
+                }
+            }
+            &.two-star {
+                &:after {
+                    background-image: url("../../../assets/images/icons/two-red-star.svg");
+                    width: 29px;
+                }
+            }
+            &.three-star {
+                &:after {
+                    background-image: url("../../../assets/images/icons/three-red-star.svg");
+                    width: 42px;
+                }
+            }
+            &.four-star {
+                &:after {
+                    background-image: url("../../../assets/images/icons/four-red-star.svg");
+                    width: 57px;
+                }
+            }
+            &.five-star {
+                &:after {
+                    background-image: url("../../../assets/images/icons/five-red-star.svg");
+                    width: 72px;
+                }
+            }
+        }
+    }
+}
