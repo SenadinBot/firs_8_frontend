@@ -327,10 +327,6 @@ $(document).ready(function () {
     });
     $('div.setup-panel div a.active-step').trigger('click');
 
-    // Product Feedback Stars
-    $('.feedback-item').on('click', function() {
-        $(this).toggleClass('active').siblings().removeClass('active');
-    });
 });
 
 //Set Map

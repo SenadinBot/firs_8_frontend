@@ -30,7 +30,6 @@
             display: inline-block;
             width: calc(100% / 5 - 22.5px);
             margin-right: 28px;
-            padding: 10px 0 10px 0;
             cursor: pointer;
             &:last-child {
                 margin-right: 0;
@@ -48,54 +47,128 @@
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s ease;
             }
-            &.active {
+            input[type="radio"]:checked ~ label {
                 span {
                     color: $mainRed;
                 }
-                .star-content {
-                    i {
+                .star-content { 
+                    &.one-star {
                         &:after {
-                            content: "";
-                            background-image: url("../../../assets/images/icons/red-star.svg");
+                            background-image: url("../../../assets/images/icons/one-red-star.svg");
+                        }
+                    }
+                    &.two-star {
+                        &:after {
+                            background-image: url("../../../assets/images/icons/two-red-star.svg");
+                        }
+                    }
+                    &.three-star {
+                        &:after {
+                            background-image: url("../../../assets/images/icons/three-red-star.svg");
+                        }
+                    }
+                    &.four-star {
+                        &:after {
+                            background-image: url("../../../assets/images/icons/four-red-star.svg");
+                        }
+                    }
+                    &.five-star {
+                        &:after {
+                            background-image: url("../../../assets/images/icons/five-red-star.svg");
                         }
                     }
                 }
             }
-            &:hover {
-                span {
-                    color: $mainRed;
-                }
-                .star-content {
-                    i {
-                        &:after {
-                            content: "";
-                            background-image: url("../../../assets/images/icons/red-star.svg");
+            label {
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                padding: 10px 0 10px 0;
+                cursor: pointer;
+                &:hover {
+                    span {
+                        color: $mainRed;
+                    }
+                    .star-content { 
+                        &.one-star {
+                            &:after {
+                                background-image: url("../../../assets/images/icons/one-red-star.svg");
+                            }
+                        }
+                        &.two-star {
+                            &:after {
+                                background-image: url("../../../assets/images/icons/two-red-star.svg");
+                            }
+                        }
+                        &.three-star {
+                            &:after {
+                                background-image: url("../../../assets/images/icons/three-red-star.svg");
+                            }
+                        }
+                        &.four-star {
+                            &:after {
+                                background-image: url("../../../assets/images/icons/four-red-star.svg");
+                            }
+                        }
+                        &.five-star {
+                            &:after {
+                                background-image: url("../../../assets/images/icons/five-red-star.svg");
+                            }
                         }
                     }
                 }
             }
-            .star-content {
+            .planes-radio {
+                display: none;
+            }
+            .star-content { 
                 display: block;
                 margin: 0 auto 5px auto;
-                font-size: 0;
-                i {
-                    display: inline-block;
-                    margin-right: 3px;
-                    &:last-child {
-                        margin-right: 0;
-                    }
+                &:after {
+                    content: "";
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: block;
+                    margin: 0 auto;
+                    width: 12px;
+                    height: 11px;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                }
+                &.one-star {
                     &:after {
-                        content: "";
-                        background-image: url("../../../assets/images/icons/gray-star.svg");
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        display: block;
+                        background-image: url("../../../assets/images/icons/one-gray-star.svg");
                         width: 12px;
-                        height: 11px;
-                        -webkit-transition: all 0.3s ease;
-                        -moz-transition: all 0.3s ease;
-                        -o-transition: all 0.3s ease;
-                        transition: all 0.3s ease;
+                    }
+                }
+                &.two-star {
+                    &:after {
+                        background-image: url("../../../assets/images/icons/two-gray-star.svg");
+                        width: 29px;
+                    }
+                }
+                &.three-star {
+                    &:after {
+                        background-image: url("../../../assets/images/icons/three-gray-star.svg");
+                        width: 42px;
+                    }
+                }
+                &.four-star {
+                    &:after {
+                        background-image: url("../../../assets/images/icons/four-gray-star.svg");
+                        width: 57px;
+                    }
+                }
+                &.five-star {
+                    &:after {
+                        background-image: url("../../../assets/images/icons/five-gray-star.svg");
+                        width: 72px;
                     }
                 }
             }
