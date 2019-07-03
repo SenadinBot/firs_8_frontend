@@ -329,6 +329,47 @@ $(document).ready(function () {
 
     // Tabs to Accordion
     $(".tab_accord_wrapper").tab2accordion();
+
+    // Product Feedback Scroll
+    $(".product-star-container a").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + 200
+        }, 1300);
+    });
+
+    // Product Image Gallery
+    $('#productGallery').lightGallery({
+        thumbnail: false,
+    });
+    var $carousel = $('.slider-for');
+
+    $carousel
+        .slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            adaptiveHeight: true,
+            asNavFor: '.slider-nav'
+        });
+    $('.slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        vertical: true,
+        focusOnSelect: true,
+    });
+
+    // Show More/Less
+    $('.more-btn').on('click', function () {
+        var txt = $(this).parent().hasClass('show-more') ? 'LÆS MERE' : 'Læs mindre';
+        $(this).text(txt);
+        $(this).parent().toggleClass('show-more');
+    });
+    $('.tab_accord_wrapper .tabs li').on('click', function () {
+        $('.tab_content').removeClass('show-more')
+    })
 });
 
 //Set Map

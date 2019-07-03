@@ -298,7 +298,7 @@
                         content: "";
                         width: 16px;
                         height: 16px;
-                        background-image: url("../../../assets/images/icons/red-right-icon.png");
+                        background-image: url("../../../assets/images/icons/red-right-icon.svg");
                         background-repeat: no-repeat;
                         background-size: cover;
                         right: 0;
@@ -408,7 +408,7 @@
             -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            background-image: url("../../../assets/images/icons/play.png");
+            background-image: url("../../../assets/images/icons/play.svg");
             background-repeat: no-repeat;
             background-size: cover;
             @include media-xs-portrait {
