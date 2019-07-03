@@ -203,8 +203,11 @@
         .product-image {
             margin-right: 60px;
             display: inline-block;
-            width: 40%;
+            width: 45%;
             vertical-align: top;
+            @include media-xlg {
+                width: 40%;
+            }
             .slider-nav {
                 display: inline-block;
                 width: 80px;
@@ -237,13 +240,21 @@
                 .slick-slide {
                     cursor: zoom-in;
                 }
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;                
+                }
             }
         }
         .product-info {
             display: inline-block;
             padding-top: 28px;
-            width: calc(60% - 60px);
+            width: calc(55% - 60px);
             vertical-align: top;
+            @include media-xlg {
+                width: calc(60% - 60px);
+            }
             .primary-btn {
                 width: 261px;
                 margin-bottom: 16px;
@@ -271,6 +282,10 @@
             }
             h1 {
                 margin-bottom: 15px;
+                font-size: 48px;
+                @include media-xlg {
+                    font-size: 56px;
+                }
             }
             span {
                 position: relative;
