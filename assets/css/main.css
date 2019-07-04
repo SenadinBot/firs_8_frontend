@@ -1193,7 +1193,7 @@ header {
           content: "";
           width: 22px;
           height: 22px;
-          background-image: url("../../../assets/images/icons/search-icon.png");
+          background-image: url("../../../assets/images/icons/search-icon.svg");
           background-size: cover;
           background-repeat: no-repeat;
           display: block;
@@ -1202,7 +1202,7 @@ header {
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease; }
         header .icon-container .header-search .header-search-icon:hover:after {
-          background-image: url("../../../assets/images/icons/red-search-icon.png"); }
+          background-image: url("../../../assets/images/icons/red-search-icon.svg"); }
       header .icon-container .header-search.search-active .header-search-icon {
         display: none; }
       header .icon-container .header-search.search-active input {
@@ -1285,7 +1285,7 @@ header {
           content: "";
           width: 18px;
           height: 18px;
-          background-image: url("../../../assets/images/icons/search-icon.png");
+          background-image: url("../../../assets/images/icons/search-icon.svg");
           background-size: cover;
           background-repeat: no-repeat;
           display: block;
@@ -1323,7 +1323,7 @@ header {
         content: "";
         width: 29px;
         height: 23px;
-        background-image: url("../../../assets/images/icons/cart-icon.png");
+        background-image: url("../../../assets/images/icons/cart-icon.svg");
         background-size: cover;
         background-repeat: no-repeat;
         display: block;
@@ -1332,9 +1332,9 @@ header {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
       header .icon-container .checkout-icon:hover:after {
-        background-image: url("../../../assets/images/icons/red-cart-icon.png"); }
+        background-image: url("../../../assets/images/icons/red-cart-icon.svg"); }
       header .icon-container .checkout-icon.active-checkout-icon:after {
-        background-image: url("../../../assets/images/icons/red-cart-icon.png"); }
+        background-image: url("../../../assets/images/icons/red-cart-icon.svg"); }
       header .icon-container .checkout-icon.active-checkout-icon span {
         color: #D1001A;
         font-size: 12px;
@@ -2720,7 +2720,7 @@ header {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      background-image: url(../../../assets/images/icons/play.png);
+      background-image: url("../../../assets/images/icons/play.svg");
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 1; }

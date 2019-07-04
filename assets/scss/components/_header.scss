@@ -978,7 +978,7 @@ header {
                     content: "";
                     width: 22px;
                     height: 22px;
-                    background-image: url("../../../assets/images/icons/search-icon.png");
+                    background-image: url("../../../assets/images/icons/search-icon.svg");
                     background-size: cover;
                     background-repeat: no-repeat;
                     display: block;
@@ -989,7 +989,7 @@ header {
                 }
                 &:hover {
                     &:after {
-                        background-image: url("../../../assets/images/icons/red-search-icon.png");
+                        background-image: url("../../../assets/images/icons/red-search-icon.svg");
                     }
                 }
             }
@@ -1085,7 +1085,7 @@ header {
                     content: "";
                     width: 18px;
                     height: 18px;
-                    background-image: url("../../../assets/images/icons/search-icon.png");
+                    background-image: url("../../../assets/images/icons/search-icon.svg");
                     background-size: cover;
                     background-repeat: no-repeat;
                     display: block;
@@ -1134,7 +1134,7 @@ header {
                 content: "";
                 width: 29px;
                 height: 23px;
-                background-image: url("../../../assets/images/icons/cart-icon.png");
+                background-image: url("../../../assets/images/icons/cart-icon.svg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 display: block;
@@ -1145,12 +1145,12 @@ header {
             }
             &:hover {
                 &:after {
-                    background-image: url("../../../assets/images/icons/red-cart-icon.png");
+                    background-image: url("../../../assets/images/icons/red-cart-icon.svg");
                 }                              
             }
             &.active-checkout-icon {
                 &:after {
-                    background-image: url("../../../assets/images/icons/red-cart-icon.png");
+                    background-image: url("../../../assets/images/icons/red-cart-icon.svg");
                 }  
                 span {
                     color: $mainRed;
