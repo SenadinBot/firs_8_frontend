@@ -374,10 +374,12 @@ $(document).ready(function () {
     // Product Checkout
     $('.checkout-btn').on('click', function () {
         $('.checkout-container').addClass('checkout-active');
+        $('body').addClass('checklist-open');
     })
     $('.close-checkout').on('click', function () {
         $('.checkout-container').removeClass('checkout-active').removeClass('category-active');
         $('.category-container').removeClass('categoryItem');
+        $('body').removeClass('checklist-open');
     });
     $('.additional-item').on('click', function () {
         $('.checkout-container').addClass('category-active');

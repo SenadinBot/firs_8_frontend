@@ -3965,6 +3965,9 @@ header {
   .tab_accord_wrapper .tab_drawer_heading .fa {
     float: right;
     font-size: 18px; } }
+body.checklist-open {
+  overflow: hidden; }
+
 .checkout-container {
   position: fixed;
   top: 0;
@@ -4181,9 +4184,12 @@ header {
           .checkout-container .checkout-sidebar .checkout-sidebar-footer span.back-button:hover:before {
             background-image: url("../../../assets/images/icons/checkout-icons/checkout-red-back.svg"); }
     .checkout-container .checkout-sidebar .checkout-sidebar-body {
-      margin-top: 102px; }
+      margin-top: 102px;
+      height: calc(100% - (102px + 252px));
+      overflow-y: auto; }
       @media (min-width: 1600px) {
         .checkout-container .checkout-sidebar .checkout-sidebar-body {
+          height: calc(100% - (152px + 272px));
           margin-top: 152px; } }
       .checkout-container .checkout-sidebar .checkout-sidebar-body .checkout-item {
         padding: 36px 34px;

@@ -1,7 +1,10 @@
+body {
+    &.checklist-open {
+        overflow: hidden;
+    }
+}
 .checkout-container {
     position: fixed;
-    // position: absolute;
-
     top: 0;
     left: 0;
     z-index: 9000;
@@ -254,10 +257,10 @@
         }
         .checkout-sidebar-body {
             margin-top: 102px;
-            // height: calc(100% - (102px + 252px));
-            // overflow-y: auto;
+            height: calc(100% - (102px + 252px));
+            overflow-y: auto;
             @include media-xlg {
-                // height: calc(100% - (152px + 272px));
+                height: calc(100% - (152px + 272px));
                 margin-top: 152px;
             }
             .checkout-item {
