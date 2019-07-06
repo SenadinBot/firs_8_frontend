@@ -248,7 +248,7 @@
                         <button class="inner-close-icon"></button>
                     </form>
                 </div>
-                <a href="#" class="checkout-icon active-checkout-icon">
+                <a href="#" class="checkout-icon active-checkout-icon checkout-btn">
                     <span>2</span>
                 </a>
             </div>
@@ -301,7 +301,7 @@
                         hjertestarteren starter automatisk, når låget åbnes.</p>
                     <span class="old-price add-line">11.874 DKK</span>
                     <span class="price add-line">16.770 DKK inkl. moms. </span>
-                    <a href="#" class="primary-btn">TILFØJ TIL KURV</a>
+                    <a href="#" class="primary-btn checkout-btn">TILFØJ TIL KURV</a>
                     <span class="delivery-time">Leveringstid: 1-2 hverdage</span>
                 </div>
             </div>
@@ -800,6 +800,141 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-container checkout-active">
+            <div class="checkout-sidebar">
+                <div class="checkout-sidebar-header">
+                    <h2>Indkøbskurv</h2>
+                    <span class="close-checkout">LUK</span>
+                </div>
+                <div class="checkout-sidebar-body">
+                    <div class="main-sidebar-body">
+                        <div class="checkout-item">
+                            <h3>DefiSign AED – Hjertestarter</h3>
+                            <span>16.770 DKK inkl.moms</span>
+                            <div class="input-group">
+                                <button type="button" class="btn-number minus-btn" disabled="disabled" data-type="minus"
+                                    data-field="quant[1]">
+                                </button>
+                                <input type="text" name="quant[1]" class="input-number" value="1" min="1" max="20">
+                                <button type="button" class="btn-number" data-type="plus" data-field="quant[1]">
+                                </button>
+                            </div>
+                            <i class="remove-item"></i>
+                        </div>
+                        <div class="additional-container">
+                            <h3>Det er vigtigt at tilføje</h3>
+                            <div class="additional-item-container">
+                                <div class="additional-item active" rel="addItem1">
+                                    <span>Hjertestarterskab</span>
+                                </div>
+                                <div class="additional-item" rel="addItem2">
+                                    <span>Kursus</span>
+                                </div>
+                                <div class="additional-item" rel="addItem3">
+                                    <span>Serviceaftale</span>
+                                </div>
+                                <div class="additional-item" rel="addItem4">
+                                    <span>Førstehjælpstaske</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-sidebar-body">
+                        <div class="category-container" id="addItem1">
+                            <div class="new-additional-item active">
+                                <div class="additional-content">
+                                    <span>Claus Andersen HS100, Rustfrit stål udendørs udendørs</span>
+                                    <p>8.045 kr. inkl. moms (Spar 2.885 kr.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                            <div class="new-additional-item active">
+                                <div class="additional-content">
+                                    <span>Indendørsskab, universelt</span>
+                                    <p>500 kr. inkl. moms (Spar 50%.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJET</a>
+                            </div>
+                            <div class="new-additional-item">
+                                <div class="additional-content">
+                                    <span>Claus Andersen HS100, Rustfrit stål udendørs</span>
+                                    <p>8.045 kr. inkl. moms (Spar 2.885 kr.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                            <div class="new-additional-item">
+                                <div class="additional-content">
+                                    <span>Indendørsskab, universelt</span>
+                                    <p>500 kr. inkl. moms (Spar 50%.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                        </div>
+                        <div class="category-container" id="addItem2">
+                            <div class="new-additional-item">
+                                <div class="additional-content">
+                                    <span>Test2</span>
+                                    <p>8.045 kr. inkl. moms (Spar 2.885 kr.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                            <div class="new-additional-item active">
+                                <div class="additional-content">
+                                    <span>Indendørsskab, universelt</span>
+                                    <p>500 kr. inkl. moms (Spar 50%.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJET</a>
+                            </div>
+                            <div class="new-additional-item">
+                                <div class="additional-content">
+                                    <span>Claus Andersen HS100, Rustfrit stål udendørs</span>
+                                    <p>8.045 kr. inkl. moms (Spar 2.885 kr.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                        </div>
+                        <div class="category-container" id="addItem3">
+                            <div class="new-additional-item">
+                                <div class="additional-content">
+                                    <span>Test3</span>
+                                    <p>8.045 kr. inkl. moms (Spar 2.885 kr.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                            <div class="new-additional-item active">
+                                <div class="additional-content">
+                                    <span>Indendørsskab, universelt</span>
+                                    <p>500 kr. inkl. moms (Spar 50%.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJET</a>
+                            </div>
+                        </div>
+                        <div class="category-container" id="addItem4">
+                            <div class="new-additional-item">
+                                <div class="additional-content">
+                                    <span>Test4</span>
+                                    <p>8.045 kr. inkl. moms (Spar 2.885 kr.)</p>
+                                </div>
+                                <a href="#" class="second-btn">TILFØJ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-sidebar-footer">
+                    <div class="main-sidebar-footer">
+                        <div class="delivery-container">
+                            <span>Levering: <span>Gratis</span></span>
+                        </div>
+                        <div class="price-container">
+                            <span class="price-amount">Kurvens totalbeløb</span>
+                            <span class="price">16.770 DKK inkl.moms</span>
+                        </div>
+                        <span class="pay-button">Gå til Betaling</span>
+                        <span class="back-button">Tilbage</span>
                     </div>
                 </div>
             </div>
