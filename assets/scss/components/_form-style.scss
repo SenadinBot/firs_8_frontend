@@ -310,10 +310,16 @@
     @include media-xlg {
         margin-top: 55px;
     }
+    @include media-xs {
+        padding: 0 10px;
+    }
 }
 .contact-us-form {
     padding: 170px 30px 77px 30px;
     font-size: 0;
+    @include media-xs {
+        padding: 100px 0 47px 0;
+    }
     h2 {
         text-align: center;
     }
@@ -332,18 +338,45 @@
         margin-right: 90px;
         vertical-align: top;
         width: calc(50% - 45px);
+        @include media-xs {
+            width: 100%;
+            margin-right: 0;
+        }
+        @include media-sm {
+            width: 100%;
+            margin-right: 0;
+        }
+        @include media-md {
+            width: calc(50% - 25px);            
+            margin-right: 50px;
+        }
     }
     .left-side {
         display: inline-block;
         vertical-align: top;
         width: calc(50% - 45px);
+        @include media-xs {
+            width: 100%;
+        }
+        @include media-sm {
+            width: 100%;
+        }
+        @include media-md {
+            width: calc(50% - 25px);
+        }
     }
     .form-group {
         &.small-input {
             display: inline-block;
-            width: calc(50% - 25px);    
+            width: calc(50% - 25px); 
+            @include media-xs {
+                width: 100%;
+            }   
             &.zipcode-group {
-                margin-right: 50px;                
+                margin-right: 50px;   
+                @include media-xs {
+                    margin-right: 0;
+                }             
             }
         }
     }

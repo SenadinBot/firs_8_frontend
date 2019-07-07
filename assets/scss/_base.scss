@@ -10,7 +10,16 @@ h1 {
     line-height: 70px;
     color: $dark;
     @include media-xs {
-        font-size: 46px;
+        font-size: 42px;
+        line-height: 58px;
+        word-break: break-all;
+    }
+    @include media-sm {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    @include media-md {
+        font-size: 52px;
         line-height: 60px;
     }
 }
@@ -24,6 +33,10 @@ h2 {
     @include media-xs {
         font-size: 36px;
         line-height: 48px;  
+    }
+    @include media-sm {
+        font-size: 40px;
+        line-height: 50px;  
     }
 }
 h3 {
@@ -304,5 +317,14 @@ a {
     margin-top: -55px;
     @include media-xlg {
         margin-top: -65px;
+    }
+    @include media-xs {
+        margin-top: 0;
+    }
+    @include media-sm {
+        margin-top: -100px;
+    }
+    @include media-md {
+        margin-top: -100px;
     }
 }

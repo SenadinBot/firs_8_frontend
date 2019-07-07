@@ -37,8 +37,25 @@
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         left: 0;
+        @include media-xs {
+            top: initial;
+            bottom: 0;
+            transform: translateY(0);     
+            width: 100%;   
+            padding: 25px;
+        }
+        @include media-sm {
+            top: initial;
+            bottom: 0;
+            transform: translateY(0);    
+            width: 100%;   
+            padding: 26px 20px 59px 69px;
+        }
         h2 {
             margin-bottom: 28px;
+            @include media-xs {
+                word-break: break-all;
+            }
         }
         span {
             color: $mainRed;
@@ -60,6 +77,12 @@
     .img-content {
         width: 70%;
         height: 100%;
+        @include media-xs {
+            width: 100%;
+        }
+        @include media-sm {
+            width: 100%;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -70,9 +93,25 @@
 .text-image-carousel {
     z-index: 1;
     .text-image-container {
+        @include media-sm {
+            display: flex; 
+            flex-direction: column;
+        }
+        @include media-xs {
+            display: flex; 
+            flex-direction: column;
+        }
         .img-content {
             margin: 0 auto 0 0;
             z-index: 99;
+            @include media-xs {
+                height: auto;
+                order: 1;             
+            }
+            @include media-sm {
+                height: auto;
+                order: 1;             
+            }
             [data-animation-in] {
                 opacity: 0;
                 animation-duration: 0.4s;
@@ -98,6 +137,21 @@
             @include media-xlg {
                 top: 150px;
                 padding-right: 200px;
+            }
+            @include media-xs {
+                top: initial;
+                padding: 26px 15px 39px 15px; 
+                position: relative;  
+                order: 2;             
+            }
+            @include media-sm {
+                padding: 26px 20px 39px 39px;
+                top: initial;
+                position: relative;    
+                order: 2;             
+            }
+            @include media-md {
+                padding: 26px 20px 39px 39px;
             }
             [data-animation-in] {
                 opacity: 0;

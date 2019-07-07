@@ -1,6 +1,9 @@
 .intro-banner-container {
     margin-bottom: 60px;
     position: relative;
+    @include media-xs {
+        margin-bottom: 40px;
+    }
 }
 .intro-banner-text {
     text-align: center;
@@ -25,10 +28,27 @@
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 1;
+        @include media-xs {
+            width: 100%;
+            top: 60px;
+        }
+        @include media-sm {
+            width: 100%;
+            top: 60px;
+        }
+        @include media-md {
+            top: 60px;
+        }
         h1 {
             color: $white;
             width: 875px;
             margin: 0 auto;
+            @include media-xs {
+                width: 100%;
+            }
+            @include media-sm {
+                width: 100%;
+            }
         }
         p {
             color: $white;
@@ -46,10 +66,10 @@
         height: 688px;
     }
     @include media-sm {
-        height: 488px;
+        height: 388px;
     }
     @include media-xs {
-        height: 288px;
+        height: 440px;
     }
     &.blue-overlay {
         &:after {
@@ -65,21 +85,50 @@
 }
 .banner-more-info-container {
     margin-top: -220px;
+    @include media-xs {
+        margin-top: 0;
+    }
+    @include media-sm {
+        margin-top: 0;
+    }
+    .container {
+        @include media-sm {
+            max-width: 100%;
+        }
+    }
     &.right-side {
         [class*='col-'] {
             margin-left: auto!important;
+            @include media-xs {
+                padding: 0;
+            }
+            @include media-sm {
+                padding: 0;
+            }
         }
     }
     &.left-side {
         [class*='col-'] {
             margin-right: auto!important;
+            @include media-xs {
+                padding: 0;
+            }
+            @include media-sm {
+                padding: 0;
+            }
         }
     }
 }
 .banner-more-info {
     padding: 75px 88px 50px 57px;
     @include media-xs {
-        padding: 35px 48px 20px 17px;
+        padding: 35px 48px 35px 17px;
+    }
+    @include media-sm {
+        padding: 35px 48px 35px 27px;        
+    }
+    @include media-md {
+        padding: 55px 68px 35px 37px;        
     }
     h2 {
         margin-bottom: 20px;
@@ -197,9 +246,17 @@
         position: relative;
         @include media-xlg {
             height: 688px;
-        }
-        @include media-xlg {
             padding-left: 110px;
+        }
+        @include media-xs {
+            width: 100%;
+            height: auto;
+            padding-left: 15px;
+        }
+        @include media-sm {
+            width: 100%;
+            height: auto;
+            padding-left: 15px;
         }
         .intro-inner-text {
             position: absolute;
@@ -208,6 +265,18 @@
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             width: 61%;
+            @include media-xs {
+                width: 100%;
+                position: relative;
+                top: 0;
+                transform: none;
+            }
+            @include media-sm {
+                width: 100%;
+                position: relative;
+                top: 0;
+                transform: none;
+            }
         }
         .btn-container {
             width: 100%;
@@ -254,6 +323,12 @@
         width: 50%;
         display: inline-block;
         background-position: initial;
+        @include media-xs {
+            width: 100%;
+        }
+        @include media-sm {
+            width: 100%;
+        }
     }
     .intro-banner-image-text {
         text-align: center;
