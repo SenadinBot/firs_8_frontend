@@ -406,7 +406,6 @@ $(document).ready(function () {
     // Plus/Minus Product Buttons
     $('.btn-number').click(function (e) {
         e.preventDefault();
-
         fieldName = $(this).attr('data-field');
         type = $(this).attr('data-type');
         var input = $("input[name='" + fieldName + "']");

@@ -7,7 +7,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9000;
+    z-index: 9;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -46,19 +46,17 @@ body {
                     opacity: 0;
                     position: absolute;
                 }
-                span {
-                    &.pay-button {
-                        visibility: hidden;
-                        height: 0;
-                        opacity: 0;
-                        position: absolute;
-                    }
-                    &.back-button {
-                        visibility: visible;
-                        height: auto;
-                        opacity: 1;
-                        position: relative;
-                    }
+                .pay-button {
+                    visibility: hidden;
+                    height: 0;
+                    opacity: 0;
+                    position: absolute;
+                }
+                .back-button {
+                    visibility: visible;
+                    height: auto;
+                    opacity: 1;
+                    position: relative;
                 }
             }
             .category-sidebar-body {
@@ -189,68 +187,66 @@ body {
                     }
                 }
             }
-            span {
-                &.pay-button {
-                    color: $white;
-                    font-family: $nunitoBold;
-                    font-size: 26px;
-                    line-height: 30px;
-                    letter-spacing: 0.03em;
-                    text-transform: uppercase;
-                    display: block;
-                    background-color: $mainRed;
-                    border-top: 1px solid $mainRed;
-                    -webkit-transition: all 0.3s ease;
-                    -moz-transition: all 0.3s ease;
-                    transition: all 0.3s ease;
-                    text-align: center;
-                    padding: 34px 10px 30px 10px;
-                    cursor: pointer;
-                    @include media-xlg {
-                        padding: 44px 10px 40px 10px;
-                    }
-                    &:hover {
-                        background-color: $white;
-                        color: $mainRed;                    
-                    }
+            .pay-button {
+                color: $white;
+                font-family: $nunitoBold;
+                font-size: 26px;
+                line-height: 30px;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                display: block;
+                background-color: $mainRed;
+                border-top: 1px solid $mainRed;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                text-align: center;
+                padding: 34px 10px 30px 10px;
+                cursor: pointer;
+                @include media-xlg {
+                    padding: 44px 10px 40px 10px;
                 }
-                &.back-button {
-                    visibility: hidden;
-                    height: 0;
-                    opacity: 0;
-                    position: absolute;
-                    font-family: $nunitoBold;
-                    font-size: 26px;
-                    line-height: 32px;
-                    letter-spacing: 0.03em;
-                    text-transform: uppercase;
-                    color: $dark;
-                    -webkit-transition: all 0.3s ease;
-                    -moz-transition: all 0.3s ease;
-                    transition: all 0.3s ease;
-                    text-align: center;
-                    padding: 34px 10px 30px 10px;
-                    cursor: pointer;
-                    display: block;
-                    @include media-xlg {
-                        padding: 44px 10px 40px 10px;
-                    }
-                    border-top: 1px solid $lightGray;
+                &:hover {
+                    background-color: $white;
+                    color: $mainRed;                    
+                }
+            }
+            .back-button {
+                visibility: hidden;
+                height: 0;
+                opacity: 0;
+                position: absolute;
+                font-family: $nunitoBold;
+                font-size: 26px;
+                line-height: 32px;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                color: $dark;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                text-align: center;
+                padding: 34px 10px 30px 10px;
+                cursor: pointer;
+                display: block;
+                @include media-xlg {
+                    padding: 44px 10px 40px 10px;
+                }
+                border-top: 1px solid $lightGray;
+                &:before {
+                    content: "";
+                    width: 21.8px;
+                    height: 21.8px;
+                    display: inline-block;
+                    margin-right: 15px;
+                    background-image: url("../../../assets/images/icons/checkout-icons/checkout-back.svg");
+                    position: relative;
+                    top: 3px;
+                }
+                &:hover {
+                    color: $mainRed;
                     &:before {
-                        content: "";
-                        width: 21.8px;
-                        height: 21.8px;
-                        display: inline-block;
-                        margin-right: 15px;
-                        background-image: url("../../../assets/images/icons/checkout-icons/checkout-back.svg");
-                        position: relative;
-                        top: 3px;
-                    }
-                    &:hover {
-                        color: $mainRed;
-                        &:before {
-                            background-image: url("../../../assets/images/icons/checkout-icons/checkout-red-back.svg");
-                        }
+                        background-image: url("../../../assets/images/icons/checkout-icons/checkout-red-back.svg");
                     }
                 }
             }
@@ -545,5 +541,374 @@ body {
                 }
             }
         }
+    }
+}
+.checkout-modal {
+    .modal-dialog {
+        margin: 30px auto 0 auto;
+        max-width: 84%;
+        @include media-xs {
+            max-width: 97%;
+        }
+        @include media-sm {
+            max-width: 95%;
+        }
+        @include media-md {
+            max-width: 90%;
+        }
+        .modal-header {
+            border-bottom: none;
+            position: relative;
+            text-align: center;
+            display: block;
+            padding: 37px 10px 55px 10px;
+            h2 {
+                display: block;
+                width: 100%;
+                margin: 0 auto 20px auto;
+            }
+            p {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                font-family: $openSansSemiBold;
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: 0.02em;
+                a {
+                    color: $mainRed;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: -1px;
+                        left: 0;
+                        background-color: $mainRed;
+                        visibility: hidden;
+                        -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
+                        -webkit-transition: all 0.3s ease-in-out 0s;
+                        -moz-transition: all 0.3s ease-in-out 0s;
+                        -ms-transition: all 0.3s ease-in-out 0s;
+                        -o-transition: all 0.3s ease-in-out 0s;
+                        transition: all 0.3s ease-in-out 0s;
+                    }
+                    &:hover {
+                        &:before {
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                            -moz-transform: scaleX(1);
+                            -ms-transform: scaleX(1);
+                            -o-transform: scaleX(1);
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+            button {
+                position: absolute;
+                top: 55px;
+                right: 47px;
+                background-color: transparent;
+                box-shadow: none;
+                border: none;
+                text-transform: uppercase;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                font-family: $openSans;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                padding: 0;
+                color: $dark;
+                &:after {
+                    content: "";
+                    height: 15.5px;
+                    width: 15.5px;
+                    display: inline-block;
+                    margin-left: 10px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-image: url("../../../assets/images/icons/checkout-icons/close-checkout.svg");
+                    position: relative;
+                    top: 1px;
+                }
+                &:hover {
+                    color: $mainRed;
+                    &:after {
+                        background-image: url("../../../assets/images/icons/checkout-icons/close-red-checkout.svg");
+                    }                        
+                }
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    color: $mainRed;
+                }
+            }
+        }
+        .modal-body {
+            padding: 0 0 40px 0;
+            margin: 0 auto;
+            width: 92%;
+            @include media-xlg {
+                width: 70%;
+                padding: 0 0 60px 0;
+            }
+            .stepwizard-container {
+                font-size: 0;
+                margin-bottom: 44px;
+                .stepwizard-step {
+                    display: inline-block;
+                    margin-right: 30px;
+                    width: calc(100% / 4 - 23px);
+                    text-align: center;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        text-transform: uppercase;
+                        font-family: $nunitoBold;
+                        font-size: 16px;
+                        line-height: 22px;
+                        letter-spacing: 0.03em;
+                        text-transform: uppercase;
+                        background-color: transparent;
+                        border: none;
+                        padding: 20px 0;
+                        display: block;
+                        background-color: $lightBrown;
+                        color: $white;
+                        &:focus {
+                            outline: none;
+                        }
+                        &.active-step {
+                            color: $white;
+                            background-color: $mainRed;
+                        }
+                    }
+                    [type="button"] {
+                        -webkit-appearance: none;
+                        outline: none;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .btn-circle[disabled] {
+                        cursor: not-allowed;
+                        pointer-events: none;
+                        outline: none;
+                        box-shadow: none;
+                        background-color: $gray;
+                        color: $lightBrown;
+                        &:hover {
+                            &:after {
+                                background-image: url("../../assets/images/icons/dark-dot.svg");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .step-form-container {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            @include media-xs {
+                display: initial;
+                display: initial;
+                display: block;
+                -ms-flex-wrap: initial;
+                    flex-wrap: initial;
+            }
+            .stepcontent-container {
+                width: calc(100% - 395px);
+                margin-right: 53px;
+                vertical-align: top;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                @include media-xs {
+                    display: initial;
+                    display: initial;
+                    display: block;
+                    -webkit-box-orient: initial;
+                    -webkit-box-direction: initial;
+                    -ms-flex-direction: initial;
+                    flex-direction: initial;
+                }
+            }
+            .item-price-container {
+                width: 337px;
+                border: 1px solid $lightGray;
+                vertical-align: top;
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                @include media-xs {
+                    display: initial;
+                    display: initial;
+                    display: block;
+                    -webkit-box-orient: initial;
+                    -webkit-box-direction: initial;
+                    -ms-flex-direction: initial;
+                    flex-direction: initial;
+                }
+                .item-inner-price-container {
+                    max-height: 480px;
+                    overflow: auto;
+                }
+                .item-price-content {
+                    border-bottom: 1px solid $lightGray;
+                    min-height: 153px;
+                    padding: 23.5px 30px 20px 50px;
+                    span {
+                        display: block;
+                        width: 100%;
+                        font-family: $openSansSemiBold;
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: $dark;
+                        &.price {
+                            font-family: $openSans;
+                            font-size: 16px;
+                            letter-spacing: 0.02em;
+                        }
+                    }
+                }
+                .checkout-price {
+                    position: absolute;
+                    bottom: 20px;
+                    padding-right: 10px;
+                    padding-left: 50px;
+                    span {
+                        display: block;
+                        width: 100%;
+                        font-family: $openSansSemiBold;
+                        font-size: 16px;
+                        line-height: 30px;
+                        letter-spacing: 0.02em;
+                        &.price {
+                            color: $mainRed;
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+            .step-content {
+                border: none;
+                padding: 0;
+                position: relative;
+                font-size: 0;
+            }
+            .form-group {
+                input {
+                    border-color: #F2F0F0;
+                    background-color: #F2F0F0;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    &:focus {
+                        border-color: $mainRed;
+                        background-color: $white;
+                    }
+                }
+                textarea {
+                    height: 139px;
+                    border-color: #F2F0F0;
+                    background-color: #F2F0F0;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    &:focus {
+                        border-color: $mainRed;
+                        background-color: $white;
+                    }
+                }
+                &.error {
+                    input {
+                        border-color: $mainRed;
+                    }
+                }
+                &.margin-right {
+                    margin-right: 30px;
+                    @include media-xs {
+                        margin-right: 0;
+                    }
+                }
+                &.small-width {
+                    width: 255px;
+                    display: inline-block;
+                }
+                &.big-width {
+                    width: calc(100% - 285px);
+                    display: inline-block;
+                }
+                &.agree-checkbox {
+                    margin-top: 16px;
+                    margin-bottom: 125px;
+                    label {
+                        font-size: 16px;
+                        font-family: $openSans;
+                        a {
+                            color: $mainRed;
+                            &:before {
+                                background-color: $mainRed;
+                            }
+                        }
+                    }
+                }
+                label {
+                    font-size: 18px;
+                    font-family: $openSansSemiBold;
+                    span {
+                        font-family: $nunitoBold;
+                        font-size: 20px;
+                        color: $lightBrown;
+                    }
+                }
+            }
+            .btn-container {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+            .primary-btn {
+                width: 100%;
+                text-align: center;
+                background-color: $lightBrown;
+                border-color: $lightBrown;
+                font-size: 26px;
+                line-height: 32px;
+                letter-spacing: 0.03em;
+                padding: 9px 54px 5px 54px;
+                color: $white;
+                &:hover {
+                    background-color: $mainRed;
+                    border-color: $mainRed;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .modal-content {
+        border-radius: 0;
     }
 }
