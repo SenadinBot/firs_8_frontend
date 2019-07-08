@@ -384,6 +384,12 @@
 .select-item-container {
     font-size: 0;
     margin: -58px 0 60px 0;
+    @include media-xs {
+        display: none;
+    }
+    @include media-sm {
+        display: none;
+    }
     .select-item {
         margin-right: 28px;
         width: calc((100% / 5) - 22.5px);
@@ -668,6 +674,18 @@
         right: -webkit-calc(-100% + (100vw - 1110px) / 2);
         right: calc(100% + (-100vw - 1110px) / 2);
         z-index: 99;
+        @include media-xs {
+            right: 15px;
+            top: 96px;
+        }
+        @include media-sm {
+            right: 39px;
+            top: 105px;
+        }
+        @include media-md {
+            right: 45px;
+            top: 108px;
+        }
     }
 }
 .step-form-container {

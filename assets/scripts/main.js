@@ -279,6 +279,15 @@ $(document).ready(function () {
         }
     });
 
+    $(window).bind('scroll', function() {
+        if($(window).scrollTop() >= $('.gray-background .container').offset().top + $('.gray-background .container').outerHeight() - window.innerHeight + 350) {
+            $('.filter-container').css('opacity', '0');            
+        } 
+        else {
+            $('.filter-container').css('opacity', '1');            
+        }
+    });
+
     // Form Steps Wizard
     var navListItems = $('div.setup-panel div a'),
         allWells = $('.step-content'),
