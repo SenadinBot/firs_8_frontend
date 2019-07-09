@@ -191,6 +191,7 @@ header {
             height: 100vh;
             background: #505759;
             overflow-y: auto;
+            z-index: 9;
         }
         @include media-sm {
             margin-left: -100%;
@@ -201,11 +202,11 @@ header {
             height: 100vh;
             background: #505759;
             overflow-y: auto;
+            z-index: 9;
         }
         @include media-md {
             padding-left: 40px;
-        width: calc(100% - 260px);
-
+            width: calc(100% - 260px);
         }
         @include media-xs-landscape {
             padding-bottom: 320px;
