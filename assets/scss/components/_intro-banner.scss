@@ -122,7 +122,8 @@
 .banner-more-info {
     padding: 75px 88px 50px 57px;
     @include media-xs {
-        padding: 35px 48px 35px 17px;
+        padding: 35px 20px 35px 20px;
+        text-align: center;
     }
     @include media-sm {
         padding: 35px 48px 35px 27px;        
@@ -258,6 +259,10 @@
             height: auto;
             padding-left: 15px;
         }
+        @include media-md {
+            padding-left: 40px;
+            height: 450px;
+        }
         .intro-inner-text {
             position: absolute;
             top: 50%;
@@ -270,12 +275,17 @@
                 position: relative;
                 top: 0;
                 transform: none;
+                padding-right: 20px;
             }
             @include media-sm {
                 width: 100%;
                 position: relative;
                 top: 0;
                 transform: none;
+                text-align: center;
+            }
+            @include media-md {
+                width: 90%;
             }
         }
         .btn-container {
@@ -289,6 +299,12 @@
                 padding: 17px 9px;
                 &:first-child {
                     margin-right: 36px;
+                    @include media-xs-portrait {
+                        margin-right: 20px;
+                    }
+                }
+                @include media-xs-portrait {
+                    min-width: 160px;                    
                 }
                 &:last-child {
                     margin-right: 0;
@@ -308,6 +324,13 @@
         }
         p {
             padding: 0;
+            @include media-md {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+            }
         }
         b {
             font-family: $nunitoBold;
@@ -326,8 +349,14 @@
         @include media-xs {
             width: 100%;
         }
+        @include media-xs-portrait {
+            height: 220px;
+        }
         @include media-sm {
             width: 100%;
+        }
+        @include media-md {
+            height: 450px;
         }
     }
     .intro-banner-image-text {

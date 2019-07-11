@@ -2,6 +2,9 @@
     background-color: $white;
     padding: 40px 30px 35px 30px;
     font-size: 0;
+    @include media-xs {
+        padding: 40px 0;
+    }
     .form-container {
         margin-top: 0;
     }
@@ -15,6 +18,9 @@
         width: calc(100% / 2 - 15px);
         &.full-width {
             margin: 0 0 30px 0;
+            width: 100%;
+        }
+        @include media-xs {
             width: 100%;
         }
         &.margin-right {
@@ -36,6 +42,14 @@
             cursor: pointer;
             &:last-child {
                 margin-right: 0;
+                @include media-xs {
+                    margin-bottom: 0;
+                }
+            }
+            @include media-xs {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
             }
             span {
                 display: block;
@@ -49,6 +63,10 @@
                 -moz-transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s ease;
+                @include media-sm {
+                    display: none;
+
+                }
             }
             input[type="radio"]:checked ~ label {
                 span {
@@ -92,6 +110,9 @@
                 height: 100%;
                 padding: 10px 0 10px 0;
                 cursor: pointer;
+                @include media-sm {
+                    padding: 10px 0 6px 0;
+                }
                 &:hover {
                     span {
                         color: $mainRed;

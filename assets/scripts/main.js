@@ -130,6 +130,7 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     variableWidth: false,
+                    centerMode: false,
                 }
             },
             {
@@ -143,7 +144,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     variableWidth: false,
                 }
