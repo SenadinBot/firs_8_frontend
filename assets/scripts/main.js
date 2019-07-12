@@ -221,7 +221,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     variableWidth: false,
                 }
@@ -361,7 +361,27 @@ $(document).ready(function () {
             arrows: false,
             fade: true,
             adaptiveHeight: true,
-            asNavFor: '.slider-nav'
+            asNavFor: '.slider-nav',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: true                   
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: true                        
+                    }
+                },
+            ]
         });
     $('.slider-nav').slick({
         slidesToShow: 4,

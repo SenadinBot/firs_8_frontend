@@ -6,6 +6,7 @@
     }
     @include media-xs {
         height: auto;
+        text-align: center;
     }
     @include media-sm {
         height: auto;        

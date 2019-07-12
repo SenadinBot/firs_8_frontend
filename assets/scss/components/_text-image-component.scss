@@ -152,6 +152,16 @@
         .img-content {
             margin: 0 auto 0 0;
             z-index: 99;
+            @include media-md {
+                height: 450px;
+            }
+            @include media-sm {
+                height: 350px;
+            }
+            @include media-xs {
+                display: flex; 
+                flex-direction: column;
+            }
             [data-animation-in] {
                 opacity: 0;
                 animation-duration: 0.4s;

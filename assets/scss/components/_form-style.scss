@@ -691,6 +691,12 @@
 .step-form-container {
     width: 540px;
     margin: 0 auto;
+    @include media-xs {
+        width: 100%;
+    }
+    @include media-md {
+        width: 100%;
+    }
     .form-group {
         margin-bottom: 22px;
         input {
@@ -714,6 +720,13 @@
         border: 1px solid $mainRed;
         padding: 50px 37px 94.5px 43px;
         min-height: 571px;
+        position: relative;
+        @include media-xs {
+            padding: 30px 20px;
+        }
+        @include media-md {
+            padding: 30px 20px;
+        }
         span {
             &.title {
                 color: $dark;
@@ -729,6 +742,8 @@
         }
         .btn-container {
             margin-top: 50px;
+            position: absolute;
+            bottom: 30px;
         }
         .primary-btn {
             min-width: 180px;
@@ -737,6 +752,10 @@
             }
             &:last-child {
                 margin-right: 0;
+            }
+            @include media-xs {
+                min-width: 130px;
+                padding: 17px 35px;
             }
         }
     }

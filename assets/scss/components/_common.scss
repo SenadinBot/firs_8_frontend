@@ -695,6 +695,14 @@
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     height: 100%;
+    @include media-xs {
+        margin-bottom: 30px;
+        height: auto;
+    }
+    @include media-sm {
+        margin-bottom: 30px;
+        height: auto;
+    }
     h3 {
         font-family: $nunitoBold;
         font-size: 26px;
@@ -708,6 +716,10 @@
         transition: all 0.3s ease;
         padding: 0 10px 8.5px 10px;
         margin-bottom: 40px;
+        @include media-md {
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
     &:hover {
         border-color: $mainRed;
