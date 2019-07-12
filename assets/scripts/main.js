@@ -29,6 +29,7 @@ $(document).ready(function () {
         $('body').toggleClass('menu-open');
         $('.menu-item-side').removeClass('second-level');
         $('.sub-menu').removeClass('first-level');
+        $('.header-search').removeClass('search-active');
     })
 
     $('.phone-container').on('click', function () {
@@ -136,7 +137,7 @@ $(document).ready(function () {
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     variableWidth: false,
                 }
@@ -213,7 +214,7 @@ $(document).ready(function () {
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     variableWidth: false,
                 }
@@ -235,7 +236,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 800,
+        speed: 600,
         lazyLoad: 'progressive',
         waitForAnimate: true,
         useTransform: true,
@@ -405,6 +406,7 @@ $(document).ready(function () {
     $('.checkout-btn').on('click', function () {
         $('.checkout-container').addClass('checkout-active');
         $('body').addClass('checklist-open');
+        $('.header-search').removeClass('search-active');
     })
     $('.close-checkout').on('click', function () {
         $('.checkout-container').removeClass('checkout-active').removeClass('category-active');

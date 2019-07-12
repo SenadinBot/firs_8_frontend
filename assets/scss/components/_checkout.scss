@@ -68,6 +68,11 @@ body {
                 -ms-transform: translateX(0);
                 transform: translateX(0);
             }
+            .checkout-sidebar-body {
+                @include media-xs {
+                    height: calc(100% - (65px + 77px));
+                }
+            }
         } 
     }
     .checkout-sidebar {
@@ -99,6 +104,10 @@ body {
             @include media-xlg {
                 height: 152px;
             }
+            @include media-xs {
+                height: 65px;
+                padding: 20px 24px;
+            }
             h2 {
                 margin: 0;
                 display: inline-block;
@@ -124,6 +133,9 @@ body {
                 -moz-transition: all 0.3s ease;
                 transition: all 0.3s ease;
                 cursor: pointer;
+                @include media-xs {
+                    right: 24px;
+                }
                 &:after {
                     content: "";
                     width: 15.5px;
@@ -152,9 +164,13 @@ body {
             bottom: 0;
             left: 0;
             width: 100%;
+            background-color: $white;
             .delivery-container {
                 padding: 7.5px 15px 7.5px 34px;
                 background-color: #F7F7F7;
+                @include media-xs {
+                    padding: 7.5px 15px 7.5px 24px;
+                }
                 span {
                     color: $dark;
                     font-size: 18px;
@@ -168,7 +184,10 @@ body {
                 }
             }
             .price-container {
-                padding: 20px 15px 30px 34px;                
+                padding: 20px 15px 30px 34px;   
+                @include media-xs {
+                    padding: 10px 15px 20px 24px;                
+                }             
                 span {
                     display: block;
                     &.price-amount {
@@ -206,6 +225,12 @@ body {
                 @include media-xlg {
                     padding: 44px 10px 40px 10px;
                 }
+                @include media-md {
+                    padding: 24px 10px 20px 10px;
+                }
+                @include media-xs {
+                    padding: 24px 10px 20px 10px;
+                }
                 &:hover {
                     background-color: $white;
                     color: $mainRed;                    
@@ -231,6 +256,12 @@ body {
                 display: block;
                 @include media-xlg {
                     padding: 44px 10px 40px 10px;
+                }
+                @include media-md {
+                    padding: 24px 10px 20px 10px;
+                }
+                @include media-xs {
+                    padding: 24px 10px 20px 10px;
                 }
                 border-top: 1px solid $lightGray;
                 &:before {
@@ -259,11 +290,21 @@ body {
                 height: calc(100% - (152px + 272px));
                 margin-top: 152px;
             }
+            @include media-xs {
+                margin-top: 65px;
+                height: calc(100% - (65px + 232px));
+            }
             .checkout-item {
                 padding: 36px 34px;
                 background-color: $gray;
                 margin-bottom: 2px;
                 position: relative;
+                @include media-md {
+                    padding: 25px 34px;
+                }
+                @include media-xs {
+                    padding: 26px 24px;
+                }
                 h3 {
                     margin-bottom: 10px;
                     width: 70%;
@@ -357,6 +398,9 @@ body {
                     top: 53px;
                     right: 37px;
                     cursor: pointer;
+                    @include media-xs {
+                        right: 27px;
+                    }
                     &:after {
                         content: "";
                         height: 14px;
@@ -378,9 +422,18 @@ body {
             }
             .additional-container {
                 padding: 25px 34px 35px 34px;
+                @include media-md {
+                    padding: 20px 34px 25px 34px;
+                }
+                @include media-xs {
+                    padding: 25px 24px 35px 24px;
+                }
                 .additional-item-container {
                     font-size: 0;
                     margin-top: 7px;
+                    @include media-md {
+                        margin-top: 0;
+                    }
                     .additional-item {
                         position: relative;
                         border: 1px solid $lightBrown;
@@ -395,6 +448,9 @@ body {
                         cursor: pointer;
                         &:nth-child(even) {
                             margin-right: 0;
+                        }
+                        @include media-xs-portrait {
+                            width: 100%;
                         }
                         &:after {
                             content: "";
@@ -463,6 +519,12 @@ body {
             transition: transform 0ms linear .35s,background-color .35s cubic-bezier(.4,0,.2,1);
             .new-additional-item {
                 padding: 26px 34px;
+                @include media-xs {
+                    padding: 26px 24px;
+                }
+                @include media-xs-portrait {
+                    text-align: right;
+                }
                 &.active {
                     background-color: $gray;
                     .second-btn {
@@ -485,6 +547,11 @@ body {
                     display: inline-block;
                     width: calc(100% - 173px);
                     vertical-align: top;
+                    @include media-xs-portrait {
+                        width: 100%;
+                        text-align: left;
+                        margin-bottom: 20px;
+                    }
                 }
                 span {
                     color: $dark;
@@ -516,6 +583,7 @@ body {
                 }
             }
             .category-container {
+                display: none;
                 visibility: hidden;
                 height: 0;
                 opacity: 0;
@@ -538,6 +606,7 @@ body {
                     -webkit-transform: translateX(0);
                     -ms-transform: translateX(0);
                     transform: translateX(0);
+                    display: block;
                 }
             }
         }

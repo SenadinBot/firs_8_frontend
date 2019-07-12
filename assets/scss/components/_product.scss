@@ -394,6 +394,9 @@
                 @include media-xs {
                     width: 100%;
                 }
+                @include media-md {
+                    width: 100%;
+                }
             }
             h1 {
                 margin-bottom: 15px;

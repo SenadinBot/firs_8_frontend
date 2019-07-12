@@ -599,7 +599,7 @@
         top: 0;
         right: 0;
         text-align: left;
-        z-index: 1;
+        z-index: 2;
         visibility: hidden;
         height: 0;
         opacity: 0;
@@ -607,6 +607,9 @@
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
+        @include media-xs {
+            width: 100%;
+        }
         ul {
             list-style: none;
             margin: 0;
@@ -676,7 +679,13 @@
         z-index: 99;
         @include media-xs {
             right: 15px;
-            top: 96px;
+            top: 89px;
+        }
+        &.active-filter {
+            @include media-xs {
+                width: 100%;
+                right: 0;
+            }
         }
         @include media-sm {
             right: 39px;
