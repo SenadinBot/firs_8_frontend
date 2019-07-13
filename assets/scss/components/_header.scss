@@ -28,6 +28,9 @@ body {
                             @include media-xs {
                                 top: 80.55px;
                             }
+                            @include media-sm {
+                                top: 98.55px;
+                            }
                         }
                     }
                 }
@@ -36,10 +39,10 @@ body {
         &.menu-open {
             overflow: hidden;     
             nav {
-                margin-left: 0%;
+                margin-right: 0%;
             }
             footer {
-                margin-left: 100%;
+                margin-right: 100%;
                 @include media-xs {
                     float: left;
                     overflow: hidden;
@@ -71,11 +74,17 @@ body {
     overflow-x: hidden;
     &.menu-open {     
         nav {
-            margin-left: 0%;
-            width: 100%;
+            @include media-xs {
+                margin-right: 0%;
+                width: calc(100% - 24px);
+            }
+            @include media-sm {
+                margin-right: 0%;
+                width: calc(100% - 24px);
+            }
         }
         footer {
-            margin-left: 100%;
+            margin-right: 100%;
             @include media-xs {
                 float: left;
                 overflow: hidden;
@@ -85,6 +94,19 @@ body {
                 float: left;
                 overflow: hidden;
                 height: 0;
+            }
+        }
+        main {
+            overflow: hidden;
+            @include media-xs {
+                opacity: 0;
+                transition: margin-right 0.5s ease;
+                -webkit-transition: margin-right 0.5s ease; 
+            }
+            @include media-sm {
+                opacity: 0;
+                transition: margin-right 0.5s ease;
+                -webkit-transition: margin-right 0.5s ease; 
             }
         }
         .image-banner-container {
@@ -114,7 +136,7 @@ header {
             padding: 19px 25px;
         }
         @include media-sm {
-            padding: 15px;
+            padding: 15px 20px 15px 24px;
         }
         @include media-xs {
             padding: 17px 20px 17px 24px;
@@ -173,6 +195,10 @@ header {
             background-size: cover;
             width: 20px;
             height: 14px;
+            @include media-sm {
+                width: 25px;
+                height: 18px;
+            }
         }
     }
     .logo-container {
@@ -198,32 +224,61 @@ header {
         top: 5px;
         background: none;
         display: inline-block;
-        transition: margin-left 1s ease;
-        -webkit-transition: margin-left 1s ease; 
+        transition: margin-right 0.5s ease;
+        -webkit-transition: margin-right 0.5s ease; 
         width: calc(100% - 260px);
         text-align: left;
         padding-left: 70px;
         @include media-xs {
-            margin-left: -100%;
-            width: 0;
+            margin-right: -100%;
+            width: 100%;
             position: absolute;
             top: 59.55px;
-            left: 0;
+            right: 0;
             height: 100vh;
-            background: #505759;
+            background: #212640;
             overflow-y: auto;
             z-index: 9;
+            padding: 0;
         }
         @include media-sm {
-            margin-left: -100%;
-            width: 0;
+            margin-right: -100%;
+            width: 100%;
             position: absolute;
             top: 75px;
-            left: 0;
+            right: 0;
             height: 100vh;
-            background: #505759;
+            background: #212640;
             overflow-y: auto;
             z-index: 9;
+            padding: 0;
+        }
+        .step-back {
+            display: none;
+            @include media-xs {
+                font-size: 16px;
+                font-family: $nunito;
+                color: $white;
+                letter-spacing: 0.03em;
+                line-height: 22px;
+                padding: 18px 0 20px 33px;
+                display: inline-block;
+                width: 100%;
+                display: block;
+                border-bottom: 1px solid $white;
+            }
+            @include media-sm {
+                font-size: 16px;
+                font-family: $nunitoBold;
+                color: $white;
+                letter-spacing: 0.03em;
+                line-height: 22px;
+                padding: 18px 0 20px 33px;
+                display: inline-block;
+                width: 100%;
+                display: block;
+                border-bottom: 1px solid $white;
+            }
         }
         @include media-md {
             padding-left: 40px;
@@ -248,7 +303,6 @@ header {
             }
             @include media-md {
                 margin-left: 0;
-                // text-align: center;
             }
             > li {
                 list-style: none;
@@ -266,17 +320,17 @@ header {
                     width: 100%;
                     text-align: left;
                     padding: 0;
-                    border-bottom: 1px solid #979797;
-                    position: relative;
+                    border-bottom: 1px solid #BCBCBC;
                     margin-right: 0;
+                    position: relative;
                 }
                 @include media-sm {
                     width: 100%;
                     text-align: left;
                     padding: 0;
-                    border-bottom: 1px solid #979797;
-                    position: relative;
+                    border-bottom: 1px solid #BCBCBC;
                     margin-right: 0;
+                    position: relative;
                 }
                 @include media-md {
                     margin-right: 15px;
@@ -296,22 +350,24 @@ header {
                     padding: 0 5px 21px 5px;
                     word-break: break-all;
                     @include media-xs {
-                        font-size: 19px;
+                        font-size: 20px;
+                        font-family: $nunitoBold;
                         color: $white;
-                        letter-spacing: 0;
-                        line-height: 26px;
-                        padding: 20px 0 20px 26px;
+                        letter-spacing: 0.03em;
+                        line-height: 27px;
+                        padding: 13px 0 14px 33px;
                         display: inline-block;
-                        width: calc(100% - 52px);
+                        width: calc(100% - 44px);
                     }
                     @include media-sm {
-                        font-size: 19px;
+                        font-size: 20px;
+                        font-family: $nunitoBold;
                         color: $white;
-                        letter-spacing: 0;
-                        line-height: 26px;
-                        padding: 20px 0 20px 26px;
+                        letter-spacing: 0.03em;
+                        line-height: 27px;
+                        padding: 16px 0 17px 33px;
                         display: inline-block;
-                        width: calc(100% - 52px);
+                        width: calc(100% - 44px);
                     }
                     @include media-md {
                         font-size: 22px;
@@ -337,6 +393,12 @@ header {
                         -ms-transition: all 0.3s ease-in-out 0s;
                         -o-transition: all 0.3s ease-in-out 0s;
                         transition: all 0.3s ease-in-out 0s;
+                        @include media-xs {
+                            display: none;
+                        }
+                        @include media-sm {
+                            display: none;                            
+                        }
                     }
                     &:hover {
                         text-decoration: none;
@@ -357,20 +419,30 @@ header {
                         color: $dark;
                         text-decoration: none;
                         outline: none;
+                        @include media-xs {
+                            color: $white;
+                        }
+                        @include media-sm {
+                            color: $white;
+                        }
                     }
                     &:active {
                         text-decoration: none;
                         outline: none;
+                        @include media-xs {
+                            color: $white;
+                        }
+                        @include media-sm {
+                            color: $white;
+                        }
                     }
                 }
                 &.active {
                     @include media-xs {
-                        background: #F4EFEF;
-                        border-bottom: none;
+                        background: $gray;
                     }
                     @include media-sm {
-                        background: #F4EFEF;
-                        border-bottom: none;
+                        background: $gray;
                     }
                     > a {
                         &:before {
@@ -396,7 +468,7 @@ header {
                         .white-icon {
                             display: none;
                         }
-                        .black-icon {
+                        .red-icon {
                             display: block;
                         }
                     }
@@ -444,18 +516,18 @@ header {
                         }
                     }
                     &.first-level {
-                        > .mobile-arrow {
-                            img {
-                                -webkit-transform: rotate(270deg);
-                                -moz-transform: rotate(270deg);
-                                transform: rotate(270deg);
-                            }
+                        @include media-xs {
+                            position: initial;
+                        }
+                        @include media-sm {
+                            position: initial;
                         }
                         .mega-menu {
                             visibility: visible;
                             opacity: 1;
-                            position: relative;
                             height: auto;
+                            z-index: 99;
+                            height: 100vh;
                         }
                     }
                 }
@@ -463,33 +535,32 @@ header {
                     position: absolute;
                     top: 0;
                     right: 0;
-                    width: 48px;
-                    height: 66px;
-                    .black-icon {
+                    width: 41px;
+                    height: 54px;
+                    .red-icon {
                         display: none;
                     }
                     img {
-                        width: 22px;
-                        height: 22px;
+                        width: 17.24px;
+                        height: 10.49px;
                         object-fit: cover;  
                         -webkit-transition: 0.2s linear;
                         -moz-transition: 0.2s linear;
                         transition: 0.2s linear;      
                         position: relative;
-                        top: 22px;            
+                        top: 23.5px;   
+                        object-fit: contain;         
                     }
                 }
                 .mega-menu {
                     visibility: hidden;
                     opacity: 0;
-                    // visibility: visible;
-                    // opacity: 1;
                     position: absolute;
                     left: 0;
                     top: 53px;
                     text-align: left;
                     width: 100%;
-                    z-index: 0;
+                    z-index: 9;
                     height: 0;
                     -webkit-transition: all 0.4s ease-in-out;
                     -moz-transition: all 0.4s ease-in-out;
@@ -520,18 +591,20 @@ header {
                     @include media-xs {
                         top: 0;
                         border-radius: 0;
-                        -webkit-transition: none;
-                        -moz-transition: none;
-                        -o-transition: none;
-                        transition: none;
+                        box-shadow: none;
+                        -webkit-transition: all 0.4s ease-in-out;
+                        -moz-transition: all 0.4s ease-in-out;
+                        -o-transition: all 0.4s ease-in-out;
+                        transition: all 0.4s ease-in-out;
                     }
                     @include media-sm {
                         top: 0;
                         border-radius: 0;
-                        -webkit-transition: none;
-                        -moz-transition: none;
-                        -o-transition: none;
-                        transition: none;
+                        box-shadow: none;
+                        -webkit-transition: all 0.4s ease-in-out;
+                        -moz-transition: all 0.4s ease-in-out;
+                        -o-transition: all 0.4s ease-in-out;
+                        transition: all 0.4s ease-in-out;
                     }
                     .menu-items-container {
                         width: calc(100vw + 100px);
@@ -556,6 +629,7 @@ header {
                             -webkit-transform: none;
                             -ms-transform: none;
                             box-shadow: none;
+                            background-color: #212640;
                         }
                         @include media-sm {
                             width: 100%;
@@ -565,6 +639,7 @@ header {
                             -webkit-transform: none;
                             -ms-transform: none;
                             box-shadow: none;
+                            background-color: #212640;
                         }
                         .menu-items-content-description {
                             display: inline-block;
@@ -731,34 +806,38 @@ header {
                                     }
                                 }
                                 @include media-xs {
-                                    padding: 20px 0 20px 46px;
                                     display: inline-block;
-                                    width: calc(100% - 52px);
-                                    font-size: 18px;
-                                    line-height: 24px;
-                                    font-family: $nunito;
+                                    letter-spacing: 0.03em;
+                                    font-size: 20px;
+                                    line-height: 27px;
+                                    padding: 13px 0 14px 33px;
+                                    display: inline-block;
+                                    width: calc(100% - 44px);
+                                    font-family: $nunitoBold;
                                     margin: 0;
+                                    color: $white;
                                 }
                                 @include media-sm {
-                                    padding: 20px 0 20px 46px;
                                     display: inline-block;
-                                    width: calc(100% - 52px);
-                                    font-size: 18px;
-                                    line-height: 24px;
-                                    font-family: $nunito;
+                                    letter-spacing: 0.03em;
+                                    font-size: 20px;
+                                    line-height: 27px;
+                                    padding: 13px 0 14px 33px;
+                                    display: inline-block;
+                                    width: calc(100% - 44px);
+                                    font-family: $nunitoBold;
                                     margin: 0;
+                                    color: $white;
                                 }
                             }
                             .inner-sub-menu {
                                 @include media-xs {
                                     margin-top: 0;
                                     padding-top: 0;
-                                    border-top: 1.5px solid #BEB8B8;
                                 }
                                 @include media-sm {
                                     margin-top: 0;
                                     padding-top: 0;
-                                    border-top: 1.5px solid #BEB8B8;
                                 }
                                 a {
                                     font-size: 18px;
@@ -767,14 +846,28 @@ header {
                                     font-family: $nunito;
                                     padding-bottom: 16px;
                                     @include media-xs {
-                                        margin-bottom: 0;
-                                        padding: 10px 0 10px 56px;
-                                        line-height: 26px;
+                                        display: inline-block;
+                                        letter-spacing: 0.03em;
+                                        font-size: 20px;
+                                        line-height: 27px;
+                                        padding: 13px 0 14px 33px;
+                                        display: inline-block;
+                                        width: calc(100% - 44px);
+                                        font-family: $nunitoBold;
+                                        margin: 0;
+                                        color: $white;
                                     }
                                     @include media-sm {
-                                        margin-bottom: 0;
-                                        padding: 10px 0 10px 56px;
-                                        line-height: 26px;
+                                        display: inline-block;
+                                        letter-spacing: 0.03em;
+                                        font-size: 20px;
+                                        line-height: 27px;
+                                        padding: 13px 0 14px 33px;
+                                        display: inline-block;
+                                        width: calc(100% - 44px);
+                                        font-family: $nunitoBold;
+                                        margin: 0;
+                                        color: $white;
                                     }
                                 }
                                 @include media-xs {
@@ -786,10 +879,6 @@ header {
                                     text-align: left;
                                     width: 100%;
                                     z-index: 99;
-                                    // -webkit-transition: all 0.4s ease-in-out;
-                                    // -moz-transition: all 0.4s ease-in-out;
-                                    // -o-transition: all 0.4s ease-in-out;
-                                    // transition: all 0.4s ease-in-out;
                                 }
                                 @include media-sm {
                                     visibility: hidden;
@@ -800,10 +889,16 @@ header {
                                     text-align: left;
                                     width: 100%;
                                     z-index: 99;
-                                    // -webkit-transition: all 0.4s ease-in-out;
-                                    // -moz-transition: all 0.4s ease-in-out;
-                                    // -o-transition: all 0.4s ease-in-out;
-                                    // transition: all 0.4s ease-in-out;
+                                }
+                                ul {
+                                    li {
+                                        @include media-xs {
+                                            border-bottom: 1px solid $white;
+                                        }
+                                        @include media-sm {
+                                            border-bottom: 1px solid $white;
+                                        }
+                                    }
                                 }
                                 .mobile-arrow { 
                                     img {
@@ -828,8 +923,8 @@ header {
                                     width: 100%;
                                     max-width: 100%;
                                     display: block;
+                                    border-bottom: 1px solid $white;
                                     position: relative;
-                                    border-bottom: 1px solid $dark;
                                 }
                                 @include media-sm {
                                     margin-right: 0;
@@ -837,7 +932,8 @@ header {
                                     max-width: 100%;
                                     display: block;
                                     position: relative;
-                                    border-bottom: 1px solid $dark;
+                                    border-bottom: 1px solid $white;
+                                    position: relative;
                                 }
                                 &:last-child {
                                     @include media-xs {
@@ -852,25 +948,29 @@ header {
                                     margin-right: 35px;
                                 }
                                 &.second-level {
-                                    .mobile-arrow {
-                                        img {
-                                            -webkit-transform: rotate(270deg);
-                                            -moz-transform: rotate(270deg);
-                                            transform: rotate(270deg);
-                                        }
+                                    @include media-xs {
+                                        position: absolute;
+                                        top: 0;
+                                    }
+                                    @include media-sm {
+                                        position: absolute;
+                                        top: 0;
                                     }
                                     .inner-sub-menu {
                                         visibility: visible;
                                         opacity: 1;
-                                        position: relative;
+                                        top: 0;
+                                        z-index: 99;
+                                        background: #212640;
+                                        height: 100vh;
                                     }
                                 }
                                 .mobile-arrow {
                                     .white-icon {
-                                        display: none;
-                                    }
-                                    .black-icon {
                                         display: block;
+                                    }
+                                    .red-icon {
+                                        display: none;
                                     }
                                 }
                             }
@@ -1072,6 +1172,14 @@ header {
                         padding: 10px 20px 10px 24px;
                         transition: transform 0ms linear, background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
                     }
+                    @include media-sm {
+                        position: fixed;
+                        left: 0;
+                        width: 100%;
+                        top: 154px;
+                        padding: 10px 20px 10px 24px;
+                        transition: transform 0ms linear, background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
                     @include media-xs-landscape {
                         top: 150px;
                     }
@@ -1102,6 +1210,10 @@ header {
                     transition: transform 0ms linear 0.35s, background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
                     border: 1px solid $mainRed;
                 }
+                @include media-sm {
+                    transition: transform 0ms linear 0.35s, background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                    border: 1px solid $mainRed;
+                }
             }
             button {
                 background: transparent;
@@ -1124,6 +1236,11 @@ header {
                 padding: 0 10px;
                 width: 100%;
                 @include media-xs {
+                    transition: none;
+                    padding: 2px 10px;
+                    border-bottom: 1px solid $mainRed;
+                }
+                @include media-sm {
                     transition: none;
                     padding: 2px 10px;
                     border-bottom: 1px solid $mainRed;
@@ -1166,6 +1283,11 @@ header {
                     padding: 13px 10px;
                     position: relative;
                 }
+                @include media-sm {
+                    background-color: $white;
+                    padding: 13px 10px;
+                    position: relative;
+                }
                 &:after {
                     content: "";
                     width: 18px;
@@ -1179,6 +1301,13 @@ header {
                     -o-transition: all 0.3s ease;
                     transition: all 0.3s ease;
                     @include media-xs {
+                        top: 6px;
+                        left: 4px;
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                    }
+                    @include media-sm {
                         top: 6px;
                         left: 4px;
                         position: absolute;
@@ -1202,6 +1331,12 @@ header {
                     border-right: 1px solid $white;
                     position: relative;
                 }
+                @include media-sm {
+                    background-color: $white;
+                    padding: 13px 10px;
+                    border-right: 1px solid $white;
+                    position: relative;
+                }
                 &:after {
                     content: "";
                     width: 14px;
@@ -1215,6 +1350,13 @@ header {
                     -o-transition: all 0.3s ease;
                     transition: all 0.3s ease;
                     @include media-xs {
+                        top: 8px;
+                        right: 3px;
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;                    
+                    }
+                    @include media-sm {
                         top: 8px;
                         right: 3px;
                         position: absolute;

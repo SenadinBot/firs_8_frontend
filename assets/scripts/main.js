@@ -48,6 +48,12 @@ $(document).ready(function () {
             $(this).parents('.menu-items-content-item').siblings().children().removeClass('second-level');
             $(this).parents('.menu-item-side').toggleClass("second-level").siblings().removeClass('second-level');
         });
+        $('.menu-item-side .step-back').on('click', function (e) {
+            $(this).parents('.menu-item-side').removeClass("second-level");
+        });
+        $('span.step-back').on('click', function (e) {
+            $(this).parents('.sub-menu').removeClass("first-level");
+        });
     }
 
     // Tablet Header Menu
@@ -56,7 +62,6 @@ $(document).ready(function () {
             $('.sub-menu').removeClass("active-hover");
         });
         $('.sub-menu').on('touchstart click', function (e) {
-            console.log('test');
             event.stopPropagation();
         })
         $('.sub-menu > a').on('touchstart click', function (e) {
@@ -65,6 +70,7 @@ $(document).ready(function () {
                     e.preventDefault();
                 }
                 $(this).parent().toggleClass("active-hover").siblings().removeClass('active-hover');
+                $('body').toggleClass('menu-open');
                 if ($(".sub-menu").hasClass("active-hover")) {
                     $(this).removeClass("active-hover");
                 }
