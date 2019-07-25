@@ -741,6 +741,14 @@ body {
                     &:last-child {
                         margin-right: 0;
                     }
+                    @include media-sm {
+                        margin-right: 15px;
+                        width: calc(100% / 4 - 12px);
+                    }
+                    @include media-xs {
+                        margin-right: 20px;
+                        width: calc(100% / 4 - 15px);
+                    }
                     a {
                         text-transform: uppercase;
                         font-family: $nunitoBold;
@@ -760,6 +768,11 @@ body {
                         &.active-step {
                             color: $white;
                             background-color: $mainRed;
+                        }
+                        span {
+                            @include media-xs {
+                                display: none;
+                            }
                         }
                     }
                     [type="button"] {
@@ -791,13 +804,18 @@ body {
             display: -ms-flexbox;
             display: flex;
             -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+            flex-wrap: wrap;
             @include media-xs {
                 display: initial;
                 display: initial;
                 display: block;
                 -ms-flex-wrap: initial;
                     flex-wrap: initial;
+            }
+            .step-content {
+                @include media-xs {
+                    min-height: 830px;
+                }
             }
             .stepcontent-container {
                 width: calc(100% - 395px);
@@ -818,6 +836,21 @@ body {
                     -webkit-box-direction: initial;
                     -ms-flex-direction: initial;
                     flex-direction: initial;
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 80px;
+                }
+                @include media-sm {
+                    display: initial;
+                    display: initial;
+                    display: block;
+                    -webkit-box-orient: initial;
+                    -webkit-box-direction: initial;
+                    -ms-flex-direction: initial;
+                    flex-direction: initial;
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 80px;
                 }
             }
             .item-price-container {
@@ -840,6 +873,17 @@ body {
                     -webkit-box-direction: initial;
                     -ms-flex-direction: initial;
                     flex-direction: initial;
+                    width: 100%;
+                }
+                @include media-sm {
+                    display: initial;
+                    display: initial;
+                    display: block;
+                    -webkit-box-orient: initial;
+                    -webkit-box-direction: initial;
+                    -ms-flex-direction: initial;
+                    flex-direction: initial;
+                    width: 100%;
                 }
                 .item-inner-price-container {
                     max-height: 480px;
@@ -849,6 +893,9 @@ body {
                     border-bottom: 1px solid $lightGray;
                     min-height: 153px;
                     padding: 23.5px 30px 20px 50px;
+                    @include media-xs {
+                        padding: 20px 30px;
+                    }
                     span {
                         display: block;
                         width: 100%;
@@ -868,6 +915,9 @@ body {
                     bottom: 20px;
                     padding-right: 10px;
                     padding-left: 50px;
+                    @include media-xs {
+                        padding-left: 30px;
+                    }
                     span {
                         display: block;
                         width: 100%;
@@ -928,14 +978,26 @@ body {
                 &.small-width {
                     width: 255px;
                     display: inline-block;
+                    @include media-xs {
+                        width: 100%;
+                    }
                 }
                 &.big-width {
                     width: calc(100% - 285px);
                     display: inline-block;
+                    @include media-xs {
+                        width: 100%;
+                    }
                 }
                 &.agree-checkbox {
                     margin-top: 16px;
                     margin-bottom: 125px;
+                    @include media-xs {
+                        margin-bottom: 0;
+                    }
+                    @include media-sm {
+                        margin-bottom: 0;
+                    }
                     label {
                         font-size: 16px;
                         font-family: $openSans;
@@ -977,6 +1039,10 @@ body {
                     background-color: $mainRed;
                     border-color: $mainRed;
                     color: $white;
+                }
+                @include media-xs {
+                    width: 100%;
+                    padding: 9px 15px 5px 15px;                    
                 }
             }
         }
