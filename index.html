@@ -1006,6 +1006,12 @@
                                         <span class="error-msg">Error Message</span>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="companyDetails">Virksomhedsoplysninger </label>
+                                    <div class="input-group">
+                                        <input type="text" id="companyDetails" placeholder="">
+                                    </div>
+                                </div>
                                 <div class="form-group big-width margin-right">
                                     <label for="email">Email *</label>
                                     <div class="input-group">
@@ -1019,7 +1025,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="address">Din adresse - <span>husk husnummer *</span></label>
+                                    <label for="address">Adresse</span></label>
                                     <div class="input-group">
                                         <input type="text" id="address" placeholder="Boulevarden 24 ">
                                     </div>
@@ -1048,16 +1054,81 @@
                                 </div>
                             </div>
                             <div class="step-content" id="step-2">
-                                <div class="form-group error">
-                                    <label for="">Tilføj bemærkninger til ordren. (valgfri)</label>
-                                    <div class="input-group">
-                                        <textarea name="" id=""
-                                            placeholder="Skriv bemærkning om din ordre, fx særlige bemærkning…e"></textarea>
-                                        <span class="error-msg">Error Message</span>
+                                <div class="radio-container">
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="radio_1" name="delivery-radio"
+                                            value="1" checked>
+                                        <label for="radio_1">
+                                            <span></span> Pakkeshop: Gratis
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="radio_2" name="delivery-radio"
+                                            value="2">
+                                        <label for="radio_2">
+                                            <span></span> Erhvervs adresse: Gratis
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="radio_3" name="delivery-radio"
+                                            value="3">
+                                        <label for="radio_3">
+                                            <span></span> Privat adresse: Gratis
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="btn-container">
-                                    <button class="nextBtn primary-btn" type="button">Gå til Betaling</button>
+                                <div class="address-delivery-container">
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="address_radio_1"
+                                            name="address-radio" value="1" checked>
+                                        <label for="address_radio_1">
+                                            <span></span> Samme som fakturering
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="address_radio_2"
+                                            name="address-radio" value="2">
+                                        <label for="address_radio_2">
+                                            <span></span> Anden leveringsadresse
+                                        </label>
+                                    </div>
+                                    <div class="other-address-container">
+                                        <div class="form-group ">
+                                            <label for="fullName">Indtast fulde navn *</label>
+                                            <div class="input-group">
+                                                <input type="text" required="required" id="fullName"
+                                                    placeholder="Morten La">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyDetails">Virksomhedsoplysninger </label>
+                                            <div class="input-group">
+                                                <input type="text" id="companyDetails" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Adresse</span></label>
+                                            <div class="input-group">
+                                                <input type="text" id="address" placeholder="Boulevarden 24 ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group small-width margin-right">
+                                            <label for="zipCode">Postnummer *</label>
+                                            <div class="input-group">
+                                                <input type="text" id="zipCode" placeholder="8210">
+                                            </div>
+                                        </div>
+                                        <div class="form-group big-width">
+                                            <label for="by">By *</label>
+                                            <div class="input-group">
+                                                <input type="text" id="by" placeholder="Brabrand">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <button class="nextBtn primary-btn" type="button">Gå til
+                                            Betaling</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="step-content" id="step-3">
@@ -1065,26 +1136,44 @@
                                 <!-- Content for step 3 -->
 
                                 <div class="btn-container">
-                                    <button class="nextBtn primary-btn" type="button">Gå til Kvittering</button>
+                                    <button class="nextBtn primary-btn" type="button">Gå til
+                                        Kvittering</button>
                                 </div>
                             </div>
                             <div class="step-content" id="step-4">
-
-                                <!-- Content for step 4 -->
-
+                                <h4>Kvittering</h4>
+                                <hr>
+                                <ul>
+                                    <li>Navn:<span> Morten Larsen</span></li>
+                                    <li>Virksomhedsnavn:<span> Styromatic Ejendomme ApS</span></li>
+                                    <li>Email:<span> morten@gmail.com</span></li>
+                                    <li>Telefon:<span> 22558856</span></li>
+                                    <li>Adressen:<span>Boulevarden 24</span></li>
+                                    <li>Postnummer:<span> 8210</span></li>
+                                    <li>By:<span> Brabrand</span></li>
+                                </ul>
+                                <hr>
+                                <ul>
+                                    <li>Transaktionsnr.:<span> 000885689</span></li>
+                                    <li>Transaktionstid:<span> 17-12-2019 kl.12.23</span></li>
+                                    <li>Beløb:<span> 16.770,00 DKK inkl.moms</span></li>
+                                    <li>Kort:<span> **** **** **** 2358</span></li>
+                                </ul>
                                 <div class="btn-container">
-                                    <button class="btn-success primary-btn" type="button">Send</button>
+                                    <button class="btn-success primary-btn" type="button">PRINT din kvittering</button>
                                 </div>
                             </div>
                         </div>
                         <div class="item-price-container">
                             <div class="item-inner-price-container">
                                 <div class="item-price-content">
-                                    <span class="description">Laerdal Little Anne luftvejestål udendørs</span>
+                                    <span class="description">Laerdal Little Anne luftvejestål
+                                        udendørs</span>
                                     <span class="price">632 DKK inkl.moms</span>
                                 </div>
                                 <div class="item-price-content">
-                                    <span class="description">Mediana A15 AED - Udendørs Hjertestarterpakke</span>
+                                    <span class="description">Mediana A15 AED - Udendørs
+                                        Hjertestarterpakke</span>
                                     <span class="price">15.762 DKK inkl.moms</span>
                                 </div>
                                 <div class="item-price-content">

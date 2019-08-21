@@ -1,3 +1,4 @@
+/* eslint-disable prefer-arrow-callback */
 /* eslint-disable block-scoped-var */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-use-before-define */
@@ -10,6 +11,16 @@
 /* eslint-disable func-names */
 /* eslint-disable no-undef */
 $(document).ready(() => {
+  // Show/hide Radio Content in Checkout
+  $('.address-delivery-container input').on('click', function () {
+    if ($('#address_radio_2').is(':checked')) {
+      $('.other-address-container').show('slide');
+      $('#step-2').addClass('more-content');
+    } else {
+      $('.other-address-container').hide('slide');
+      $('#step-2').removeClass('more-content');
+    }
+  });
   // Adding Class on Scroll
   $(window).on('load', () => {
     const winOffset = document.documentElement.scrollTop || document.body.scrollTop;
@@ -505,10 +516,10 @@ $(document).ready(() => {
   $('.input-number').keydown((e) => {
     // Allow: backspace, delete, tab, escape, enter and .
     if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1
-            // Allow: Ctrl+A
-            || (e.keyCode === 65 && e.ctrlKey === true)
-            // Allow: home, end, left, right
-            || (e.keyCode >= 35 && e.keyCode <= 39)) {
+      // Allow: Ctrl+A
+      || (e.keyCode === 65 && e.ctrlKey === true)
+      // Allow: home, end, left, right
+      || (e.keyCode >= 35 && e.keyCode <= 39)) {
       // let it happen, don't do anything
       return;
     }

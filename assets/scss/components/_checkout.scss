@@ -800,57 +800,28 @@ body {
         }
         .step-form-container {
             width: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            @include media-xs {
-                display: initial;
-                display: initial;
-                display: block;
-                -ms-flex-wrap: initial;
-                    flex-wrap: initial;
-            }
             .step-content {
                 @include media-xs {
                     min-height: 830px;
                 }
             }
             .stepcontent-container {
-                width: calc(100% - 395px);
-                margin-right: 53px;
+                width: calc(100% - 372px);
+                margin-right: 30px;
                 vertical-align: top;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
+                min-height: 573px;      
+                display: inline-block;          
                 @include media-xs {
-                    display: initial;
-                    display: initial;
-                    display: block;
-                    -webkit-box-orient: initial;
-                    -webkit-box-direction: initial;
-                    -ms-flex-direction: initial;
-                    flex-direction: initial;
                     width: 100%;
                     margin-right: 0;
                     margin-bottom: 80px;
+                    min-height: auto;
                 }
                 @include media-sm {
-                    display: initial;
-                    display: initial;
-                    display: block;
-                    -webkit-box-orient: initial;
-                    -webkit-box-direction: initial;
-                    -ms-flex-direction: initial;
-                    flex-direction: initial;
                     width: 100%;
                     margin-right: 0;
                     margin-bottom: 80px;
+                    min-height: auto;
                 }
             }
             .item-price-container {
@@ -858,32 +829,15 @@ body {
                 border: 1px solid $lightGray;
                 vertical-align: top;
                 position: relative;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
+                min-height: 573px;
+                display: inline-block;          
                 @include media-xs {
-                    display: initial;
-                    display: initial;
-                    display: block;
-                    -webkit-box-orient: initial;
-                    -webkit-box-direction: initial;
-                    -ms-flex-direction: initial;
-                    flex-direction: initial;
                     width: 100%;
+                    min-height: auto;
                 }
                 @include media-sm {
-                    display: initial;
-                    display: initial;
-                    display: block;
-                    -webkit-box-orient: initial;
-                    -webkit-box-direction: initial;
-                    -ms-flex-direction: initial;
-                    flex-direction: initial;
                     width: 100%;
+                    min-height: auto;
                 }
                 .item-inner-price-container {
                     max-height: 480px;
@@ -911,8 +865,6 @@ body {
                     }
                 }
                 .checkout-price {
-                    position: absolute;
-                    bottom: 20px;
                     padding-right: 10px;
                     padding-left: 50px;
                     @include media-xs {
@@ -937,6 +889,47 @@ body {
                 padding: 0;
                 position: relative;
                 font-size: 0;
+            }
+            #step-2 {
+                .btn-container {
+                    position: absolute;
+                }
+                &.more-content {
+                    .btn-container {
+                        position: relative;
+                        margin-top: 8px;
+                    }
+                }
+            }
+            .radio-container {
+                border-top: 1px solid #F1F1F1;
+                border-bottom: 1px solid #F1F1F1;
+                font-size: 0;
+                padding: 18.5px 0 17.5px 0;
+                .form-group {
+                    margin-bottom: 0;
+                    display: inline-block;
+                    min-width: calc(100% / 3 - 10px);
+                    text-align: left;
+                    label {
+                        margin: 0;
+                    }
+                    &:nth-child(2) {
+                        min-width: calc(100% / 3 + 20px);                        
+                    }
+                }
+            }
+            .address-delivery-container {
+                padding-top: 38.5px;
+                .form-group {
+                    label {
+                        margin: 0;
+                    }
+                }
+                .other-address-container {
+                    display: none;
+                    padding-top: 15px;
+                }
             }
             .form-group {
                 input {
@@ -966,7 +959,19 @@ body {
                 }
                 &.error {
                     input {
-                        border-color: $mainRed;
+                        border-color: #FFD62B;
+                        background-color: #FAE77D
+                    }
+                    span {
+                        &.error-msg {
+                            font-family: $openSansSemiBold;
+                            font-size: 14px;
+                            line-height: 14px;
+                            right: 0;
+                            top: initial;
+                            bottom: -17px;
+                            color: #000000;
+                        }
                     }
                 }
                 &.margin-right {
@@ -991,7 +996,8 @@ body {
                 }
                 &.agree-checkbox {
                     margin-top: 16px;
-                    margin-bottom: 125px;
+                    // margin-bottom: 125px;
+                    margin-bottom: 36px;
                     @include media-xs {
                         margin-bottom: 0;
                     }
@@ -1008,6 +1014,11 @@ body {
                             }
                         }
                     }
+                    .custom-checkbox {
+                        .checkbox-indicator {
+                            top: 2px;
+                        }
+                    }
                 }
                 label {
                     font-size: 18px;
@@ -1020,9 +1031,12 @@ body {
                 }
             }
             .btn-container {
-                position: absolute;
+                // position: absolute;
+                // bottom: -15px;
+                // left: 0;
+                position: relative;
                 bottom: 0;
-                left: 0;
+                margin-top: 0;
                 width: 100%;
             }
             .primary-btn {
@@ -1033,7 +1047,7 @@ body {
                 font-size: 26px;
                 line-height: 32px;
                 letter-spacing: 0.03em;
-                padding: 9px 54px 5px 54px;
+                padding: 13px 54px 9px 54px;
                 color: $white;
                 &:hover {
                     background-color: $mainRed;
