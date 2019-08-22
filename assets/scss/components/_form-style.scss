@@ -240,6 +240,10 @@
             position: relative;
             top: -2px;
             border: 1px solid #000000;
+            @include media-md {
+                width: 20px;
+                height: 20px;
+            } 
                 &::before {
                     content: "";        
                     opacity: 0;
@@ -259,7 +263,11 @@
                     -moz-transition: opacity 0.2s;
                     -o-transition: opacity 0.2s;
                     -webkit-transition: opacity 0.2s;
-                    transition: opacity 0.2s;     
+                    transition: opacity 0.2s;    
+                    @include media-md {
+                        width: 10px;
+                        height: 10px;
+                    } 
                 }
             } 
         }
