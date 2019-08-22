@@ -919,6 +919,57 @@ body {
                     }
                 }
             }
+            .payment-choice-container {
+                .form-group {
+                    border: 1px solid $lightGray;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    margin-bottom: 35px;
+                    padding: 10px 19px 10px 19px;
+                    &:hover {
+                        border-color: $mainRed;
+                    }
+                    .custom-radio {
+                        + label {
+                            width: 100%;
+                            span {
+                                width: auto;
+                                height: auto;
+                                top: 0;
+                                color: #313131;
+                                font-family: $openSansSemiBold;
+                                font-size: 18px;
+                                line-height: 30px;
+                                border: none;
+                                border-radius: 0;
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    img {
+                        max-height: 48px;
+                    }
+                    ul {
+                        float: right;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        font-size: 0;
+                        display: inline-block;
+                        li {
+                            margin-right: 38px;
+                            display: inline-block;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
             #step-4 { 
                 .btn-container {
                     margin-top: 80px;

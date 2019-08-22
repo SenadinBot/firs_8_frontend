@@ -1096,8 +1096,7 @@
                                         <div class="form-group ">
                                             <label for="fullName">Indtast fulde navn *</label>
                                             <div class="input-group">
-                                                <input type="text" id="fullName"
-                                                    placeholder="Morten La">
+                                                <input type="text" id="fullName" placeholder="Morten La">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -1132,9 +1131,70 @@
                                 </div>
                             </div>
                             <div class="step-content" id="step-3">
-
-                                <!-- Content for step 3 -->
-
+                                <div class="form-group">
+                                    <label for="companyDetails">Har du en rabatkode ? </label>
+                                    <div class="input-group">
+                                        <input type="text" id="rabatCode" placeholder="">
+                                        <div class="input-group-append">
+                                            <button class="primary-btn">Indløs koden</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-choice-container">
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="payment_1" name="payment-radio"
+                                            value="1" checked>
+                                        <label for="payment_1">
+                                            <div class="payment-choice-content">
+                                                <span>Betal med betalingskort</span>
+                                                <ul>
+                                                    <li>
+                                                        <img src="./assets/images/icons/dk-icon.svg"
+                                                            alt="Payment Image">
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/icons/visa-icon.svg"
+                                                            alt="Payment Image">
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/icons/masterCard-icon.svg"
+                                                            alt="Payment Image">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="payment_2" name="payment-radio"
+                                            value="2">
+                                        <label for="payment_2">
+                                            <div class="payment-choice-content">
+                                                <span>Betal med MobilePay</span>
+                                                <ul>
+                                                    <li>
+                                                        <img src="./assets/images/icons/mobilePlay-icon.svg"
+                                                            alt="Payment Image">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="custom-radio" type="radio" id="payment_3" name="payment-radio"
+                                            value="3">
+                                        <label for="payment_3">
+                                            <div class="payment-choice-content">
+                                                <span>Faktura betaling. Bankøverførsel til vores konto</span>
+                                                <ul>
+                                                    <li>
+                                                        <img src="./assets/images/icons/black-next-arrow.png"
+                                                            alt="Payment Image">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
                                 <div class="btn-container">
                                     <button class="nextBtn primary-btn" type="button">Gå til
                                         Kvittering</button>
