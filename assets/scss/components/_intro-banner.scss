@@ -355,9 +355,9 @@
                 min-width: 180px;
                 padding: 17px 9px;
                 &:first-child {
-                    margin-right: 36px;
-                    @include media-xs-portrait {
-                        margin-right: 20px;
+                    margin-right: 20px;
+                    @include media-xlg {
+                        margin-right: 36px;
                     }
                 }
                 @include media-xs-portrait {

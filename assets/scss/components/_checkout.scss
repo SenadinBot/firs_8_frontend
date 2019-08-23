@@ -928,12 +928,16 @@ body {
                     transition: all 0.3s ease;
                     margin-bottom: 35px;
                     padding: 10px 19px 10px 19px;
+                    min-height: 85px;
                     &:hover {
                         border-color: $mainRed;
                     }
                     .custom-radio {
                         + label {
                             width: 100%;
+                            margin-bottom: 0;
+                            position: relative;
+                            top: 10px;
                             span {
                                 width: auto;
                                 height: auto;
@@ -944,8 +948,16 @@ body {
                                 line-height: 30px;
                                 border: none;
                                 border-radius: 0;
+                                position: relative;
+                                top: 3px;
                                 &:before {
                                     display: none;
+                                }
+                                @include media-xs-portrait {
+                                    text-align: center;
+                                    top: 0;
+                                    width: 100%;
+                                    margin-bottom: 10px;
                                 }
                             }
                         }
@@ -960,11 +972,93 @@ body {
                         list-style: none;
                         font-size: 0;
                         display: inline-block;
+                        @include media-xs-portrait {
+                            float: none;
+                            width: 100%;
+                            text-align: center;
+                            margin-bottom: 15px;
+                        }
                         li {
                             margin-right: 38px;
+                            margin-bottom: 0;
                             display: inline-block;
                             &:last-child {
                                 margin-right: 0;
+                            }
+                            @include media-md {
+                                margin-right: 20px;
+                            }
+                            @include media-xs {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        li {
+                            img {
+                                height: 40px;
+                            }
+                            &:nth-child(2) {
+                                img {
+                                    height: 27px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        img {
+                            width: 137px;
+                            height: 44px;
+                        }
+                    }
+                    &:last-child {
+                        img {
+                            width: 22px;
+                            height: 22px;
+                        }
+                        .custom-radio {
+                            + label {
+                                top: 15px;
+                                span {
+                                    top: 0;
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #step-3 {
+                .input-group {
+                    input {
+                        width: calc(100% - 187px);
+                        @include media-xs-portrait {
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .input-group-append {
+                        width: 187px;
+                        @include media-xs-portrait {
+                            width: 100%;
+                            display: block;
+                            margin-left: 0;
+                        }
+                        .primary-btn {
+                            background-color: #D1001A;
+                            border-color: $mainRed;
+                            text-transform: initial;
+                            font-size: 18px;
+                            line-height: 18px;
+                            width: 100%;
+                            padding: 9px 20px 9px 20px;
+                            &:hover {
+                                color: #D1001A;
+                                outline: 0;
+                                background-color: #ffffff;
+                            }
+                            @include media-xs-portrait {
+                                padding: 17px 20px 15px 20px;
                             }
                         }
                     }
